@@ -1,3 +1,37 @@
+# 👋 Hi there, I'm Hemanth Babu!
+
+Welcome to my GitHub profile! I'm a passionate developer who enjoys building web applications, exploring new technologies, and solving real-world problems with code.
+
+## 🚀 About Me
+
+- 🎓 I'm currently [your current status – e.g., "pursuing a degree in Computer Science" or "working as a Front-End Developer"]
+- 🌱 I’m currently learning: [e.g., React, TypeScript, or Docker]
+- 💼 Interested in: Web Development, UI/UX, Open Source
+- 🛠️ Tech Stack: HTML, CSS, JavaScript, React, Node.js, [add yours]
+- 📫 How to reach me: [your email] | [LinkedIn] | [Portfolio website]
+
+## 🧰 Projects
+
+Here are some of my favorite projects:
+
+- 🔗 [**Personal Portfolio Website**](https://github.com/hemanthbabu648/personal-portfolio) – A responsive site to showcase my work and skills.
+- 🔗 [Project Name](project link) – Short description.
+- 🔗 [Project Name](project link) – Short description.
+
+## 📊 GitHub Stats
+
+![Hemanth's GitHub stats](https://github-readme-stats.vercel.app/api?username=hemanthbabu648&show_icons=true&theme=github_dark)
+
+---
+
+Thanks for visiting my profile! Let's connect and build something amazing. 🚀
+
+---
+
+---
+
+---
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
