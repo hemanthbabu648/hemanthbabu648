@@ -5,6 +5,7 @@
   --foreground: #050816;
   --black-100: #100d25;
   --black-200: #090325;
+  --violet-450: #915eff;
 
   --font-poppins: 'Poppins', sans-serif;
 }
@@ -16,6 +17,7 @@
   --color-foreground-primary: var(--foreground-primary);
   --color-black-100: var(--black-100);
   --color-black-200: var(--black-200);
+  --color-violet-450: var(--violet-450);
 
   --font-poppins: var(--font-poppins);
 }
@@ -53,6 +55,12 @@ body {
   background: #804dee;
   background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
   background: -webkit-linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
+}
+
+.orange-gradient {
+  background: #f97316;
+  background: linear-gradient(-180deg, #f97316 50%, rgba(249, 115, 22, 0) 70%);
+  background: -webkit-linear-gradient(-180deg, #f97316 50%, rgba(249, 115, 22, 0) 70%);
 }
 
 .green-pink-gradient {
@@ -187,8 +195,8 @@ body {
 }
 
 /* Utility Classes */
-.bg-hero-pattern {
-  background-image: url('/herobg.png');
+.bg-image-pattern {
+  background-image: url('/images/imagebg.png');
 }
 
 .hash-span {

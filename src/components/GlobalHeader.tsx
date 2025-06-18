@@ -12,7 +12,7 @@ const GlobalHeader = () => {
   const [active, setActive] = useState<string>('');
   const [toggle, setToggle] = useState<boolean>(false);
   return (
-    <header className="w-full flex items-center px-4 sm:px-6 lg:px-12 xl:px-16 py-2 fixed top-0 z-20 h-16">
+    <header className="w-full flex items-center px-4 sm:px-6 lg:px-12 xl:px-16 py-2 fixed top-0 z-20 h-16 bg-image-pattern bg-cover bg-no-repeat bg-center">
       <nav className="w-full flex gap-3 justify-between items-center max-w-7xl mx-auto">
         <Link
           href="/"
