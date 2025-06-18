@@ -5,5 +5,10 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "always"
   },
+  "editor.tabSize": 2,
+  "search.exclude": {
+    "**/node_modules": true
+  },
+  "problems.decorations.enabled": true,
   "css.lint.unknownAtRules": "ignore"
 }
