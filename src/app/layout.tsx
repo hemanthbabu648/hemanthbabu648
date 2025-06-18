@@ -1,10 +1,10 @@
+import GlobalHeader from '@/components/GlobalHeader';
+
 import { poppins } from '../../public/fonts';
 
 import type { Metadata } from 'next';
 
 import './globals.css';
-
-
 
 export const metadata: Metadata = {
   title: 'Hemanth Babu S | Portfolio',
@@ -19,7 +19,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} antialiased`}>{children}</body>
+      <body className={`${poppins.variable} ${poppins.className} antialiased`}>
+        <GlobalHeader />
+        <main className="mt-16">{children}</main>
+      </body>
     </html>
   );
 }
