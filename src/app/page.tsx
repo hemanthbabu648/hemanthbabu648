@@ -4,6 +4,7 @@ import About from '@/components/home/About';
 import Experiences from '@/components/home/Experiences';
 import Hero from '@/components/home/Hero';
 import Projects from '@/components/home/Projects';
+import TechSkills from '@/components/home/TechSkills';
 import { socialIcons } from '@/constants/home';
 
 function Home() {
@@ -29,6 +30,7 @@ function Home() {
       </div>
       <Experiences />
       <Projects />
+      <TechSkills />
     </>
   );
 }

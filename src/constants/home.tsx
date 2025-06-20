@@ -10,6 +10,35 @@ import {
   Facebook,
   Send,
 } from 'lucide-react';
+import { BiLogoTypescript } from 'react-icons/bi';
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaBootstrap,
+  FaPhp,
+  FaGitAlt,
+  FaFigma,
+  FaLinux,
+  FaWindows,
+  FaApple,
+} from 'react-icons/fa';
+import { RiJavascriptFill } from 'react-icons/ri';
+import {
+  SiReact,
+  SiNextdotjs,
+  SiRedux,
+  SiTailwindcss,
+  SiMysql,
+  SiVercel,
+  SiJest,
+  SiAntdesign,
+  SiPostman,
+  SiNpm,
+  SiYarn,
+} from 'react-icons/si';
+import { TbBrandMantine } from 'react-icons/tb';
+
+import type { IconType } from 'react-icons';
 
 type Service = {
   title: string;
@@ -237,4 +266,51 @@ export const projects: Project[] = [
     source_code_link: 'https://github.com/fsdhemanth648/',
     live_url: 'https://hemanthtic-tac-toe.netlify.app/',
   },
+];
+
+export type Technology = {
+  name: string;
+  icon: IconType;
+  value: number;
+};
+
+export const technologies: Technology[] = [
+  // Languages
+  { name: 'HTML 5', icon: FaHtml5, value: 80 },
+  { name: 'CSS 3', icon: FaCss3Alt, value: 80 },
+  { name: 'JavaScript', icon: RiJavascriptFill, value: 75 },
+  { name: 'TypeScript', icon: BiLogoTypescript, value: 100 },
+
+  // Frameworks & Libraries
+  { name: 'React JS', icon: SiReact, value: 75 },
+  { name: 'Next JS', icon: SiNextdotjs, value: 75 },
+  { name: 'Redux Toolkit', icon: SiRedux, value: 75 },
+  { name: 'TanStack Query', icon: SiPostman, value: 65 }, // No official icon; fallback used
+  { name: 'Mantine UI', icon: TbBrandMantine, value: 70 },
+  // { name: 'Material UI', icon: SiMaterialui, value: 75 },
+
+  // Styling
+  { name: 'Tailwind CSS', icon: SiTailwindcss, value: 80 },
+  { name: 'Ant Design', icon: SiAntdesign, value: 70 },
+  { name: 'Bootstrap', icon: FaBootstrap, value: 100 },
+
+  // Tools & Platforms
+  { name: 'Git', icon: FaGitAlt, value: 75 },
+  { name: 'Figma', icon: FaFigma, value: 80 },
+  // { name: 'Visual Studio Code', icon: SiVisualstudiocode, value: 90 },
+  { name: 'npm', icon: SiNpm, value: 85 },
+  { name: 'yarn', icon: SiYarn, value: 85 },
+  { name: 'Vercel', icon: SiVercel, value: 80 },
+
+  // Back-End & DB
+  { name: 'PHP', icon: FaPhp, value: 75 },
+  { name: 'MySQL', icon: SiMysql, value: 75 },
+
+  // Operating Systems
+  { name: 'Linux', icon: FaLinux, value: 70 },
+  { name: 'Windows', icon: FaWindows, value: 90 },
+  { name: 'macOS', icon: FaApple, value: 80 },
+
+  // Testing
+  { name: 'Jest', icon: SiJest, value: 65 },
 ];
