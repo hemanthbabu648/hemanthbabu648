@@ -123,3 +123,118 @@ export const experiences: Experience[] = [
     ],
   },
 ];
+
+export type Tag = {
+  name: string;
+  color: string;
+};
+
+export type Project = {
+  date: string;
+  name: string;
+  description: string;
+  tags: Tag[];
+  image: string;
+  source_code_link: string;
+  live_url: string;
+};
+
+export const projects: Project[] = [
+  {
+    date: '2023-09-01',
+    name: 'E-Library',
+    description: "It's a place where you find the all resources at free of  Cost, Just Sign In",
+    tags: [
+      {
+        name: 'Next Js',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'MongooDB',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'Material UI',
+        color: 'pink-text-gradient',
+      },
+      {
+        name: 'REST APIs',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'Tailwind CSS',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'TypeScript',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: '/images/Projects/finance-tracker.png',
+    source_code_link: 'https://github.com/fsdhemanth648/E-Library',
+    live_url: 'https://e-library-fsdhemanth648.vercel.app/',
+  },
+  {
+    date: '2023-04-01',
+    name: 'Personal Portfolio',
+    description: "It's a web application that basically showcase the portfolio of a person",
+    tags: [
+      {
+        name: 'Next Js',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'bootstrap',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'Tailwind CSS',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: '/images/Projects/finance-tracker.png',
+    source_code_link: 'https://github.com/fsdhemanth648/portfolio',
+    live_url: 'https://portfolio-fsdhemanth648-gmailcom.vercel.app/',
+  },
+  {
+    date: '2023-03-01',
+    name: 'Medium Blog',
+    description:
+      'Web application but also responsive for mobile and it is place to post medium sized blog and showcase the blogs of you.',
+    tags: [
+      {
+        name: 'nextjs',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'tailwindcss',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'css',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: '/images/Projects/finance-tracker.png',
+    source_code_link: 'https://github.com/fsdhemanth648/blogClone',
+    live_url: 'https://blogclone-hemanthbabus.vercel.app/',
+  },
+  {
+    date: '2022-09-01',
+    name: 'Tic Tac Toe',
+    description: 'Web application that enables users to play a simple GAME',
+    tags: [
+      {
+        name: 'react',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'scss',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: '/images/Projects/finance-tracker.png',
+    source_code_link: 'https://github.com/fsdhemanth648/',
+    live_url: 'https://hemanthtic-tac-toe.netlify.app/',
+  },
+];
