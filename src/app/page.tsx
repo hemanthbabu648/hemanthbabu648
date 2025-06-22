@@ -1,6 +1,8 @@
 'use client';
 
 import About from '@/components/home/About';
+import Blogs from '@/components/home/Blogs';
+import Contact from '@/components/home/Contact';
 import Experiences from '@/components/home/Experiences';
 import Hero from '@/components/home/Hero';
 import Projects from '@/components/home/Projects';
@@ -31,6 +33,8 @@ function Home() {
       <Experiences />
       <Projects />
       <TechSkills />
+      <Blogs />
+      <Contact />
     </>
   );
 }
