@@ -1,3 +1,4 @@
+import GlobalFooter from '@/components/GlobalFooter';
 import GlobalHeader from '@/components/GlobalHeader';
 
 import { poppins } from '../../public/fonts';
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body className={`${poppins.variable} ${poppins.className} antialiased`}>
         <GlobalHeader />
         <main className="mt-16">{children}</main>
+        <GlobalFooter />
       </body>
     </html>
   );
