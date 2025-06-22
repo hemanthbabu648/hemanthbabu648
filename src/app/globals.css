@@ -59,6 +59,12 @@ body {
   background: -webkit-linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
 }
 
+.black-violet-gradient {
+  background: #804dee;
+  background: linear-gradient(-180deg, #804dee 0%, rgba(60, 51, 80, 0) 70%);
+  background: -webkit-linear-gradient(-180deg, #804dee 0%, rgba(60, 51, 80, 0) 70%);
+}
+
 .orange-gradient {
   background: #f97316;
   background: linear-gradient(-180deg, #f97316 50%, rgba(249, 115, 22, 0) 70%);

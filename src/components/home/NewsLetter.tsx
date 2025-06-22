@@ -50,7 +50,7 @@ const NewsLetter = () => {
 
   return (
     <motion.div
-      className="rounded-2xl bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 p-3 md:p-5 mt-10 md:mt-20"
+      className="rounded-2xl black-violet-gradient p-3 md:p-5 mt-10 md:mt-20"
       animate={{ opacity: [0, 1], y: [20, 0] }}
       transition={{ duration: 0.5 }}
       initial={{ opacity: 0, y: 20 }}
