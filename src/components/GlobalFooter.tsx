@@ -7,7 +7,7 @@ import { socialIcons } from '@/constants/home';
 import { globalFooterNavLinks } from '@/constants/navigation';
 
 const GlobalFooter = () => (
-  <footer className="w-full py-8 bg-black-100 border-t border-gray-800 mt-10 text-gray-400 bg-image-pattern bg-cover bg-no-repeat bg-center">
+  <footer className="w-full py-8 bg-black-100 border-t border-gray-800 text-gray-400 bg-image-pattern bg-cover bg-no-repeat bg-center">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
       {/* Navigation */}
       <nav className="flex gap-5 text-sm">
