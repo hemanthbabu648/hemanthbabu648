@@ -62,7 +62,7 @@ const Contact = () => {
 
   return (
     <>
-      <h3 className="text-white text-center font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px] tracking-[5px] uppercase text-2xl">
+      <h3 className="text-white text-center font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px] tracking-[5px] uppercase text-2xl mb-4">
         Contact Me
       </h3>
       <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
@@ -70,7 +70,6 @@ const Contact = () => {
           variants={slideIn('left', 'tween', 0.2, 1)}
           className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
         >
-          {/* <h6 className="text-white text-2xl font-bold tracking-[5px] font-serif mb-2">CONTACT</h6> */}
           <p className="text-white text-2xl font-bold tracking-[5px] mb-4">Get in Touch</p>
           <form
             ref={formRef}
@@ -83,7 +82,7 @@ const Contact = () => {
                 type="text"
                 {...register('name')}
                 placeholder="What's your name?"
-                className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounde-lg outlined-none border-none font-medium"
+                className="bg-space-black py-4 px-6 placeholder:text-slate-100 text-white rounde-lg outlined-none border-none font-medium"
               />
               {errors.name && (
                 <span className="text-red-400 text-xs mt-1">{errors.name.message}</span>
@@ -96,7 +95,7 @@ const Contact = () => {
                 type="email"
                 {...register('email')}
                 placeholder="What's your email?"
-                className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounde-lg outlined-none border-none font-medium"
+                className="bg-space-black py-4 px-6 placeholder:text-slate-100 text-white rounde-lg outlined-none border-none font-medium"
               />
               {errors.email && (
                 <span className="text-red-400 text-xs mt-1">{errors.email.message}</span>
@@ -109,7 +108,7 @@ const Contact = () => {
                 rows={7}
                 {...register('message')}
                 placeholder="Do you want to say something...?"
-                className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounde-lg outlined-none border-none font-medium"
+                className="bg-space-black py-4 px-6 placeholder:text-slate-100 text-white rounde-lg outlined-none border-none font-medium"
               />
               {errors.message && (
                 <span className="text-red-400 text-xs mt-1">{errors.message.message}</span>
@@ -117,7 +116,7 @@ const Contact = () => {
             </label>
             <button
               type="submit"
-              className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
+              className="violet-gradient py-3 px-8 outline-none w-fit text-white font-bold shadow-md rounded-xl self-end"
               disabled={loading}
             >
               {loading ? 'Sending...' : 'Send'}

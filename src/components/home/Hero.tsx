@@ -26,14 +26,15 @@ const Hero = () => {
             </p>
 
             <motion.button
-              className="orange-gradient px-5 font-semibold tex-sm sm:text-xl py-2 rounded-se-xl rounded-br-lg mt-5 sm:mt-10 flex items-center gap-2 animate-bounce"
+              className="orange-gradient px-5 font-semibold tex-sm sm:text-xl py-2 rounded-se-xl rounded-br-lg mt-5 sm:mt-10 flex items-center gap-2 animate-bounce cursor-pointer"
               whileHover={{ scale: 1.08 }}
               whileTap={{ scale: 0.96 }}
               initial={{ y: 0 }}
               animate={{ y: [0, -10, 0] }}
               transition={{ repeat: Infinity, duration: 1.2 }}
+              onClick={() => window.open('/docs/hemanth_babu_setti_resume.pdf', '_blank')}
             >
-              <span>Download Resume</span>
+              Download Resume
               <Download className="w-6 h-6" />
             </motion.button>
           </div>

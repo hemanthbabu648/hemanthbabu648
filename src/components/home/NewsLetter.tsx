@@ -1,4 +1,5 @@
 import { zodResolver } from '@hookform/resolvers/zod';
+import clsx from 'clsx';
 import { motion } from 'framer-motion';
 import React from 'react';
 import { Controller, useForm } from 'react-hook-form';
@@ -65,11 +66,11 @@ const NewsLetter = () => {
           </p>
         </div>
         <form
-          className="flex items-center justify-center md:col-span-5 w-full"
+          className="flex flex-col lg:flex-row items-center justify-center md:col-span-5 w-full gap-2 mt-6 md:mt-0"
           onSubmit={handleSubmit(onSubmit)}
           noValidate
         >
-          <div className="flex w-full gap-2">
+          <div className="flex w-full flex-col lg:flex-row gap-2">
             <Controller
               name="email"
               control={control}
@@ -77,14 +78,17 @@ const NewsLetter = () => {
                 <input
                   {...field}
                   placeholder="Enter your email"
-                  className={`flex-1 rounded-l-lg px-4 py-2 border-none outline-none text-black ${errors.email ? 'ring-2 ring-red-400' : ''}`}
+                  className={clsx(
+                    'flex-1 rounded-lg lg:rounded-l-lg lg:rounded-r-none px-4 py-2 border border-xanthous bg-white/90 outline-none text-black placeholder:text-gray-500',
+                    errors?.email && 'ring-2 ring-red-400'
+                  )}
                   autoComplete="email"
                 />
               )}
             />
             <button
               type="submit"
-              className="bg-xanthous text-white px-4 py-2 rounded-r-lg font-semibold hover:bg-yellow-500 transition-colors"
+              className="bg-orange-400 text-white px-4 py-2 rounded-lg lg:rounded-r-lg lg:rounded-l-none font-semibold hover:bg-yellow-500 transition-colors w-full lg:w-auto"
             >
               Submit
             </button>

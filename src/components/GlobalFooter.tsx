@@ -28,7 +28,7 @@ const GlobalFooter = () => (
             rel="noopener noreferrer"
             className="hover:text-white transition-colors"
           >
-            <Icon />
+            <Icon size={20} />
           </a>
         ))}
       </div>

@@ -1,7 +1,4 @@
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
-import Link from 'next/link';
-import { Tilt } from 'react-tilt';
 
 import { latestBlogs, projects } from '@/constants/home';
 import SectionWrapper from '@/hooks/SectionWrapper';
@@ -9,6 +6,7 @@ import { fadeIn, textVariant } from '@/utils/motion';
 
 import BlogCard from './BlogCard';
 import NewsLetter from './NewsLetter';
+import ViewAllCard from './ViewAllCard';
 
 const Blogs = () => {
   const lastIndex = projects.length - 1;
@@ -38,26 +36,12 @@ const Blogs = () => {
           <BlogCard key={`blog-${blog.id}`} index={index} blog={blog} />
         ))}
 
-        <motion.div variants={fadeIn('up', 'spring', lastIndex * 0.5, 0.75)}>
-          <Tilt
-            options={{
-              max: 25,
-              scale: 1,
-              speed: 300,
-            }}
-            className="min-h-[450px] bg-gradient-to-br from-violet-700 to-indigo-900 p-5 rounded-2xl sm:w-[360px] w-full hover:shadow-xl transition flex flex-col justify-center items-center"
-          >
-            <div className="text-center">
-              <p className="text-white text-xl font-semibold mb-4">View All Projects</p>
-              <Link
-                href="/allApps"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-white text-black rounded-lg text-sm font-semibold hover:bg-gray-200 transition"
-              >
-                Explore More <ArrowRight size={18} />
-              </Link>
-            </div>
-          </Tilt>
-        </motion.div>
+        <ViewAllCard
+          index={lastIndex}
+          sectionName="blogs"
+          para="Explore the full collection of my blogs, featuring insights on web development, productivity tips, and personal experiences in the tech industry."
+          url="blogs.hemanthbabu648.com"
+        />
       </div>
       <NewsLetter />
     </>

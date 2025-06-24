@@ -9,9 +9,9 @@ const TechnologyCard = ({ technology }: { technology: Technology }) => {
   return (
     <div className="group relative flex items-center justify-center cursor-pointer">
       <motion.div
-        initial={{ x: 100, opacity: 0 }}
+        initial={{ y: 50, opacity: 0 }}
         transition={{ duration: 0.8 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         className="rounded-full border border-gray-500 bg-gray-900
         w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 xl:w-32 xl:h-32

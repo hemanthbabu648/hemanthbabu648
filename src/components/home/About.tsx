@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Tilt } from 'react-tilt';
 
 import { services } from '../../constants/home';
@@ -42,7 +43,7 @@ const ServiceCard = ({ index, title, icon }: ServiceCardProps) => {
 const About = () => {
   return (
     <>
-      <motion.div variants={textVariant()} className="mt-30 lg:mt-24">
+      <motion.div variants={textVariant()}>
         <p className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[22px] tracking-[8px]">
           INTRODUCTION
         </p>
@@ -63,6 +64,15 @@ const About = () => {
         problems and collaborating closely with clients to deliver impactful digital experiences
         that align with business goals.
       </motion.p>
+
+      <motion.div variants={fadeIn('', '', 0.2, 1)} className="mt-6">
+        <Link
+          href="/about"
+          className="inline-block px-6 py-2 border border-violet-600 text-violet-400 hover:bg-violet-600 hover:text-white rounded-lg font-semibold transition duration-300"
+        >
+          Know More About Me
+        </Link>
+      </motion.div>
 
       <div className="mt-20 flex flex-wrap gap-10 justify-center">
         {services.map((service, index) => (

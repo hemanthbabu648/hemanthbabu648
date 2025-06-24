@@ -30,19 +30,21 @@ const BlogCard = ({ index, blog }: { index: number; blog: Blog }) => {
           />
         </div>
         <div className="mt-5">
-          <h3 className="text-white font-bold text-[24px]">{title}</h3>
-          <p className="mt-2 text-secondary text-[14px]">{description}</p>
+          <h3 className="text-white font-bold text-[24px] line-clamp-2">{title}</h3>
+          <p className="mt-2 text-secondary text-[14px] line-clamp-3">{description}</p>
         </div>
 
-        <div className="mt-4 flex flex-wrap gap-2">
-          <p className="text-sm text-pink-300">
+        <div className="my-3 flex flex-wrap gap-2">
+          <span className="text-sm bg-pink-300 px-3 py-1 rounded-lg text-black-200">
             {category}
-            <br />
-            {subCategory}
-            <br />
-            {createdAt}
-          </p>
+          </span>
+          {subCategory && (
+            <span className="text-sm bg-blue-200 px-3 py-1 rounded-lg text-black-200">
+              {subCategory}
+            </span>
+          )}
         </div>
+        <span className="text-sm text-slate-400">Published on : {createdAt}</span>
       </Tilt>
     </motion.div>
   );

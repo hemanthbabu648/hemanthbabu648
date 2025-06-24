@@ -22,12 +22,12 @@ const ProjectCard = ({ index, project }: { index: number; project: Project }) =>
           <Image
             src={image}
             alt={name}
-            className="w-full h-full object-contain rounded-2xl"
-            width={100}
-            height={100}
+            fill
+            className="object-fill rounded-md"
+            sizes="(max-width: 1024px) 100vw, 320px"
           />
 
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+          <div className="absolute inset-0 flex justify-end m-3">
             <div
               onClick={() => window.open(source_code_link, '_blank')}
               className="black-gradient w-10 h-10 rounded-full flex justify-center
