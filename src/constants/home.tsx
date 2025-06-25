@@ -67,31 +67,31 @@ export const socialIcons: SocialNav[] = [
     title: 'LinkedIn',
     url: 'https://www.linkedin.com/in/hemanthbabu648/',
     icon: FaLinkedin,
-    className: "hover:underline text-blue-700 dark:text-blue-300"
+    className: 'hover:underline text-blue-700 dark:text-blue-300',
   },
   {
     title: 'Instagram',
     url: 'https://www.instagram.com/hemanthbabu648',
     icon: FaInstagram,
-    className: "hover:underline text-pink-600 dark:text-pink-400"
+    className: 'hover:underline text-pink-600 dark:text-pink-400',
   },
   {
     title: 'Twitter',
     url: 'https://twitter.com/hemanthbabu648',
     icon: FaTwitter,
-    className: "hover:underline text-blue-400 dark:text-blue-300"
+    className: 'hover:underline text-blue-400 dark:text-blue-300',
   },
   {
     title: 'WhatsApp',
     url: 'https://wa.me/919989191478',
     icon: FaWhatsapp,
-    className: "hover:underline text-gray-700 dark:text-gray-200"
+    className: 'hover:underline text-gray-700 dark:text-gray-200',
   },
   {
     title: 'Telegram',
     url: 'https://t.me/hemanthbabu648',
     icon: FaTelegramPlane,
-    className: "hover:underline text-blue-400 dark:text-blue-200"
+    className: 'hover:underline text-blue-400 dark:text-blue-200',
   },
 ];
 

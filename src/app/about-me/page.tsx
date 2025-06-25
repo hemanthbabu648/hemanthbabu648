@@ -1,8 +1,8 @@
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
+import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react';
 
-import { socialIcons } from "@/constants/home";
+import { socialIcons } from '@/constants/home';
 
 export default function AboutMePage() {
   return (
@@ -20,7 +20,8 @@ export default function AboutMePage() {
           Hey, I&apos;m Hemanth Babu Setti
         </h1>
         <p className="text-xl text-gray-700 dark:text-gray-300 mb-4">
-          Web Developer, Mobile Developer, Content Creator, Learner and <br /> Re-Searcher from India 🇮🇳
+          Web Developer, Mobile Developer, Content Creator, Learner and <br /> Re-Searcher from
+          India 🇮🇳
         </p>
         <div className="flex flex-wrap gap-3 justify-center mb-6">
           <span className="inline-block bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-3 py-1 rounded-full text-sm font-medium">
@@ -40,9 +41,8 @@ export default function AboutMePage() {
           </span>
         </div>
         <p className="text-lg text-gray-700 dark:text-gray-300 max-w-2xl">
-          I build sleek, responsive user interfaces and dynamic web apps, along
-          with high-quality mobile applications — backed by 2.5+ years of
-          front-end expertise.
+          I build sleek, responsive user interfaces and dynamic web apps, along with high-quality
+          mobile applications — backed by 2.5+ years of front-end expertise.
         </p>
       </section>
 
@@ -50,9 +50,10 @@ export default function AboutMePage() {
       <section className="mb-10">
         <h2 className="text-2xl font-bold mb-3 text-violet-450">The Skinny…</h2>
         <p className="text-gray-700 dark:text-gray-300 mb-2">
-          I&apos;m a web developer, mobile developer and content creator from India. I&apos;ve
-          been making websites for over 2.5+ years and mobile apps just 6 months! My main focus is React.js,
-          Next.js, React Native, Expo, Node.js, and building modern, scalable web and mobile apps.
+          I&apos;m a web developer, mobile developer and content creator from India. I&apos;ve been
+          making websites for over 2.5+ years and mobile apps just 6 months! My main focus is
+          React.js, Next.js, React Native, Expo, Node.js, and building modern, scalable web and
+          mobile apps.
         </p>
         <p className="text-gray-700 dark:text-gray-300 mb-2">
           I love sharing knowledge through blogs. I&apos;m always learning and enjoy solving
@@ -62,9 +63,7 @@ export default function AboutMePage() {
 
       {/* A little more */}
       <section className="mb-10">
-        <h2 className="text-2xl font-bold mb-3 text-violet-450">
-          A little more…
-        </h2>
+        <h2 className="text-2xl font-bold mb-3 text-violet-450">A little more…</h2>
         <Image
           src="/images/developer.webp"
           alt="Hemanth Babu Setti and family"
@@ -73,24 +72,19 @@ export default function AboutMePage() {
           className="rounded-xl shadow mb-4 object-cover w-full max-w-md mx-auto"
         />
         <p className="text-gray-700 dark:text-gray-300 mb-2">
-          I&apos;ve been in love with web development for most of my life. I
-          enjoy hacking on new tech, building tools, and making things work
-          better. I live in Bangalore often goes to home town and love spending time
-          at agriculture farms and exploring new places.
+          I&apos;ve been in love with web development for most of my life. I enjoy hacking on new
+          tech, building tools, and making things work better. I live in Bangalore often goes to
+          home town and love spending time at agriculture farms and exploring new places.
         </p>
         <p className="text-gray-700 dark:text-gray-300 mb-2">
-          My hobbies include gardening, looking the farm, some times reading books, and fixing things
-          around the house. I&apos;m always up for a challenge and love learning
-          new skills.
+          My hobbies include gardening, looking the farm, some times reading books, and fixing
+          things around the house. I&apos;m always up for a challenge and love learning new skills.
         </p>
       </section>
 
-
       {/* Featured Project/Course */}
       <section className="mb-10">
-        <h2 className="text-2xl font-bold mb-3 text-violet-450">
-          Featured Project
-        </h2>
+        <h2 className="text-2xl font-bold mb-3 text-violet-450">Featured Project</h2>
         <Image
           src="/images/Projects/finance-tracker.png"
           alt="Finance Tracker Project"
@@ -99,24 +93,18 @@ export default function AboutMePage() {
           className="rounded-xl shadow mb-4 object-cover w-full max-w-md mx-auto"
         />
         <p className="text-gray-700 dark:text-gray-300 mb-2">
-          <span className="font-semibold">Finance Tracker</span> is a modern web
-          app to help you manage your expenses and income, built with Next.js,
-          React, and Tailwind CSS. It&apos;s a great example of my approach to
-          building practical, user-friendly applications.
+          <span className="font-semibold">Finance Tracker</span> is a modern web app to help you
+          manage your expenses and income, built with Next.js, React, and Tailwind CSS. It&apos;s a
+          great example of my approach to building practical, user-friendly applications.
         </p>
-        <Link
-          href="/"
-          className="inline-block mt-2 text-violet-450 hover:underline font-semibold"
-        >
+        <Link href="/" className="inline-block mt-2 text-violet-450 hover:underline font-semibold">
           View Project
         </Link>
       </section>
 
       {/* Additional Links */}
       <section className="mb-10">
-        <h2 className="text-2xl font-bold mb-3 text-violet-450">
-          Find Me Online
-        </h2>
+        <h2 className="text-2xl font-bold mb-3 text-violet-450">Find Me Online</h2>
         <ul className="flex flex-wrap gap-4">
           <li>
             <a
@@ -128,14 +116,9 @@ export default function AboutMePage() {
               GitHub
             </a>
           </li>
-          {socialIcons.map((icon) => (
+          {socialIcons.map(icon => (
             <li key={icon.title}>
-              <a
-                href={icon.url}
-                target="_blank"
-                rel="noopener"
-                className={icon.className}
-              >
+              <a href={icon.url} target="_blank" rel="noopener" className={icon.className}>
                 {icon.title}
               </a>
             </li>
