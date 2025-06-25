@@ -1,13 +1,12 @@
-import emailjs from '@emailjs/browser';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { motion } from 'framer-motion';
 import React from 'react';
 import { useRef } from 'react';
-import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
 import SectionWrapper from '@/hooks/SectionWrapper';
+import { useEmail } from '@/hooks/useEmail';
 import { slideIn } from '@/utils/motion';
 
 const schema = z.object({
@@ -20,7 +19,6 @@ type FormData = z.infer<typeof schema>;
 
 const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null);
-  const [loading, setLoading] = useState(false);
 
   const {
     register,
@@ -31,33 +29,24 @@ const Contact = () => {
     resolver: zodResolver(schema),
   });
 
-  const onSubmit = (form: FormData) => {
-    setLoading(true);
-    emailjs
-      .send(
-        'service_5railuc',
-        'template_sumtok9',
+  const { sendEmail, loading } = useEmail();
+
+  const onSubmit = async (form: FormData) => {
+    try {
+      await sendEmail(
         {
-          from_name: form.name,
-          to_name: 'HEMANTH BABU SETTI',
-          from_email: form.email,
-          to_email: 'fsdhemanth648@gmail.com',
+          name: form.name,
+          email: form.email,
           message: form.message,
         },
-        'Zm3b55iaafc6m07VZ'
-      )
-      .then(
-        () => {
-          setLoading(false);
-          alert('Thank you. I will get back to you as soon as possible.');
-          reset();
-        },
-        (error: unknown) => {
-          setLoading(false);
-          console.log(error);
-          alert('Something went wrong.');
-        }
+        'contact'
       );
+      alert('Thank you. I will get back to you as soon as possible.');
+      reset();
+      // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
+    } catch (err) {
+      alert('Something went wrong. Please try again later.');
+    }
   };
 
   return (
@@ -116,7 +105,7 @@ const Contact = () => {
             </label>
             <button
               type="submit"
-              className="violet-gradient py-3 px-8 outline-none w-fit text-white font-bold shadow-md rounded-xl self-end"
+              className="violet-gradient py-3 px-8 outline-none w-fit text-white font-bold shadow-md rounded-xl self-end cursor-pointer disabled:cursor-not-allowed disabled:opacity-50"
               disabled={loading}
             >
               {loading ? 'Sending...' : 'Send'}

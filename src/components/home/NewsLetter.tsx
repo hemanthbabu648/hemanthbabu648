@@ -5,6 +5,8 @@ import React from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { z } from 'zod';
 
+import { useEmail } from '@/hooks/useEmail';
+
 const NewsLetterSchema = z.object({
   email: z.string().trim().email({ message: 'Invalid email address' }),
 });
@@ -23,29 +25,23 @@ const NewsLetter = () => {
       email: '',
     },
   });
+  const { sendEmail, loading } = useEmail();
+
   const onSubmit = async (data: NewsLetterFormSchema) => {
     try {
-      const res = await fetch('/api/subscribe', {
-        method: 'POST',
-        body: JSON.stringify(data),
-        headers: {
-          'Content-Type': 'application/json',
+      await sendEmail(
+        {
+          name: 'Newsletter Subscriber',
+          email: data.email,
+          message: 'I would like to subscribe to the newsletter.',
         },
-      });
-
-      const responseData = await res.json();
-
-      if (res.status === 201) {
-        alert(responseData.message || 'Subscribed successfully!');
-        reset();
-      } else if (res.status === 400) {
-        alert(responseData.message || 'Invalid email address');
-      } else {
-        alert(responseData.message || 'Failed to send message');
-      }
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars, no-unused-vars
-    } catch (error) {
-      alert('Error submitting form');
+        'newsletter'
+      );
+      alert('Thank you. You have successfully subscribed to the newsletter.');
+      reset();
+      // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
+    } catch (err) {
+      alert('Something went wrong. Please try again later.');
     }
   };
 
@@ -88,7 +84,8 @@ const NewsLetter = () => {
             />
             <button
               type="submit"
-              className="bg-orange-400 text-white px-4 py-2 rounded-lg lg:rounded-r-lg lg:rounded-l-none font-semibold hover:bg-yellow-500 transition-colors w-full lg:w-auto"
+              className="bg-orange-400 text-white px-4 py-2 rounded-lg lg:rounded-r-lg lg:rounded-l-none font-semibold hover:bg-yellow-500 transition-colors w-full lg:w-auto disabled:cursor-not-allowed disabled:opacity-50"
+              disabled={loading}
             >
               Submit
             </button>
