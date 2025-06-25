@@ -67,7 +67,7 @@ const About = () => {
 
       <motion.div variants={fadeIn('', '', 0.2, 1)} className="mt-6">
         <Link
-          href="/about"
+          href="/about-me"
           className="inline-block px-6 py-2 border border-violet-600 text-violet-400 hover:bg-violet-600 hover:text-white rounded-lg font-semibold transition duration-300"
         >
           Know More About Me

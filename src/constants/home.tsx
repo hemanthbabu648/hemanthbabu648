@@ -11,7 +11,7 @@ import {
   FaLinkedin,
   FaInstagram,
   FaTwitter,
-  FaFacebook,
+  FaWhatsapp,
   FaTelegramPlane,
 } from 'react-icons/fa';
 import { RiJavascriptFill } from 'react-icons/ri';
@@ -59,6 +59,7 @@ type SocialNav = {
   title: string;
   url: string;
   icon: React.ElementType;
+  className?: string;
 };
 
 export const socialIcons: SocialNav[] = [
@@ -66,26 +67,31 @@ export const socialIcons: SocialNav[] = [
     title: 'LinkedIn',
     url: 'https://www.linkedin.com/in/hemanthbabu648/',
     icon: FaLinkedin,
+    className: "hover:underline text-blue-700 dark:text-blue-300"
   },
   {
     title: 'Instagram',
-    url: 'https://www.instagram.com/hemanthbabu648/',
+    url: 'https://www.instagram.com/hemanthbabu648',
     icon: FaInstagram,
+    className: "hover:underline text-pink-600 dark:text-pink-400"
   },
   {
     title: 'Twitter',
     url: 'https://twitter.com/hemanthbabu648',
     icon: FaTwitter,
+    className: "hover:underline text-blue-400 dark:text-blue-300"
   },
   {
-    title: 'Facebook',
-    url: 'https://facebook.com/hemanthbabu648',
-    icon: FaFacebook,
+    title: 'WhatsApp',
+    url: 'https://wa.me/919989191478',
+    icon: FaWhatsapp,
+    className: "hover:underline text-gray-700 dark:text-gray-200"
   },
   {
     title: 'Telegram',
-    url: 'https://t.me/s-hemanthbabu-648',
+    url: 'https://t.me/hemanthbabu648',
     icon: FaTelegramPlane,
+    className: "hover:underline text-blue-400 dark:text-blue-200"
   },
 ];
 

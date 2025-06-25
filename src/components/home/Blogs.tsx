@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 
 import { latestBlogs, projects } from '@/constants/home';
+import { BLOGS_SITE_URL } from '@/constants/navigation';
 import SectionWrapper from '@/hooks/SectionWrapper';
 import { fadeIn, textVariant } from '@/utils/motion';
 
@@ -40,7 +41,7 @@ const Blogs = () => {
           index={lastIndex}
           sectionName="blogs"
           para="Explore the full collection of my blogs, featuring insights on web development, productivity tips, and personal experiences in the tech industry."
-          url="blogs.hemanthbabu648.com"
+          url={BLOGS_SITE_URL}
         />
       </div>
       <NewsLetter />

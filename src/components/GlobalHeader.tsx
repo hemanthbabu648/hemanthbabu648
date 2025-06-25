@@ -36,7 +36,7 @@ const GlobalHeader = () => {
         {/* Navigation links form 'sm' devices */}
         <ul className="list-none hidden sm:flex flex-row gap-6 xl:gap-10">
           {globalHeaderNavLinks.map(link => {
-            const path = `#${link.id}`;
+            const path = `/#${link.id}`;
             return (
               <li
                 key={link.id}
@@ -64,7 +64,7 @@ const GlobalHeader = () => {
           >
             <ul className="list-none flex flex-col gap-4 justify-end items-start">
               {globalHeaderNavLinks.map(link => {
-                const path = `#${link.id}`;
+                const path = `/#${link.id}`;
                 return (
                   <li
                     key={link.id}

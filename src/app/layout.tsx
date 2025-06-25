@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${poppins.variable} ${poppins.className} antialiased`}>
         <GlobalHeader />
-        <main>{children}</main>
+        <main className='mt-16'>{children}</main>
         <GlobalFooter />
       </body>
     </html>

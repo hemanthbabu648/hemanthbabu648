@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 
 import { projects } from '@/constants/home';
+import { APPS_SITE_URL } from '@/constants/navigation';
 import SectionWrapper from '@/hooks/SectionWrapper';
 import { fadeIn, textVariant } from '@/utils/motion';
 
@@ -39,7 +40,7 @@ const Projects = () => {
           index={lastIndex}
           sectionName="projects"
           para="Explore the full list of my work, including web apps, mobile apps, and more."
-          url="/allApps"
+          url={APPS_SITE_URL}
         />
       </div>
     </>
