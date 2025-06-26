@@ -72,6 +72,7 @@ const Contact = () => {
                 {...register('name')}
                 placeholder="What's your name?"
                 className="bg-space-black py-4 px-6 placeholder:text-slate-100 text-white rounde-lg outlined-none border-none font-medium"
+                autoComplete="text"
               />
               {errors.name && (
                 <span className="text-red-400 text-xs mt-1">{errors.name.message}</span>
@@ -85,6 +86,7 @@ const Contact = () => {
                 {...register('email')}
                 placeholder="What's your email?"
                 className="bg-space-black py-4 px-6 placeholder:text-slate-100 text-white rounde-lg outlined-none border-none font-medium"
+                autoComplete="email"
               />
               {errors.email && (
                 <span className="text-red-400 text-xs mt-1">{errors.email.message}</span>
