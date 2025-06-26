@@ -19,28 +19,28 @@ export default function AboutMePage() {
         <h1 className="text-4xl font-extrabold mb-2 text-violet-450 tracking-tight">
           Hey, I&apos;m Hemanth Babu Setti
         </h1>
-        <p className="text-xl text-gray-700 dark:text-gray-300 mb-4">
+        <p className="text-xl mb-4">
           Web Developer, Mobile Developer, Content Creator, Learner and <br /> Re-Searcher from
           India 🇮🇳
         </p>
         <div className="flex flex-wrap gap-3 justify-center mb-6">
-          <span className="inline-block bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-3 py-1 rounded-full text-sm font-medium">
+          <span className="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
             JavaScript
           </span>
-          <span className="inline-block bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 px-3 py-1 rounded-full text-sm font-medium">
+          <span className="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
             React
           </span>
-          <span className="inline-block bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 px-3 py-1 rounded-full text-sm font-medium">
+          <span className="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
             React Native
           </span>
-          <span className="inline-block bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 px-3 py-1 rounded-full text-sm font-medium">
+          <span className="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">
             Next.js
           </span>
-          <span className="inline-block bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-200 px-3 py-1 rounded-full text-sm font-medium">
+          <span className="inline-block bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm font-medium">
             Expo
           </span>
         </div>
-        <p className="text-lg text-gray-700 dark:text-gray-300 max-w-2xl">
+        <p className="text-lg max-w-2xl">
           I build sleek, responsive user interfaces and dynamic web apps, along with high-quality
           mobile applications — backed by 2.5+ years of front-end expertise.
         </p>
@@ -49,13 +49,13 @@ export default function AboutMePage() {
       {/* The Skinny */}
       <section className="mb-10">
         <h2 className="text-2xl font-bold mb-3 text-violet-450">The Skinny…</h2>
-        <p className="text-gray-700 dark:text-gray-300 mb-2">
+        <p className="mb-2">
           I&apos;m a web developer, mobile developer and content creator from India. I&apos;ve been
           making websites for over 2.5+ years and mobile apps just 6 months! My main focus is
           React.js, Next.js, React Native, Expo, Node.js, and building modern, scalable web and
           mobile apps.
         </p>
-        <p className="text-gray-700 dark:text-gray-300 mb-2">
+        <p className="mb-2">
           I love sharing knowledge through blogs. I&apos;m always learning and enjoy solving
           real-world problems with technology.
         </p>
@@ -71,12 +71,12 @@ export default function AboutMePage() {
           height={220}
           className="rounded-xl shadow mb-4 object-cover w-full max-w-md mx-auto"
         />
-        <p className="text-gray-700 dark:text-gray-300 mb-2">
+        <p className="mb-2">
           I&apos;ve been in love with web development for most of my life. I enjoy hacking on new
           tech, building tools, and making things work better. I live in Bangalore often goes to
           home town and love spending time at agriculture farms and exploring new places.
         </p>
-        <p className="text-gray-700 dark:text-gray-300 mb-2">
+        <p className="mb-2">
           My hobbies include gardening, looking the farm, some times reading books, and fixing
           things around the house. I&apos;m always up for a challenge and love learning new skills.
         </p>
@@ -111,7 +111,7 @@ export default function AboutMePage() {
               href="https://github.com/hemanthbabu648"
               target="_blank"
               rel="noopener"
-              className="hover:underline text-gray-700 dark:text-gray-200"
+              className="hover:underline"
             >
               GitHub
             </a>
