@@ -2,15 +2,18 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Tilt } from 'react-tilt';
 
-import { Blog } from '@/constants/home';
+import { Blog } from '@/types';
 import { fadeIn } from '@/utils/motion';
+import { formatDate } from '@/utils/StringUtils';
+
+import { BLOGS_BASE_URL } from '../../../config';
 
 const BlogCard = ({ index, blog }: { index: number; blog: Blog }) => {
-  const { title, description, link, image, createdAt, category, subCategory } = blog;
+  const { title, excerpt, url, coverImage, date, readTime, author } = blog;
   return (
     <motion.div
       variants={fadeIn('down', 'spring', index * 0.5, 0.75)}
-      onClick={() => window.open(link, '_blank')}
+      onClick={() => window.open(url, '_blank')}
     >
       <Tilt
         options={{
@@ -22,7 +25,7 @@ const BlogCard = ({ index, blog }: { index: number; blog: Blog }) => {
       >
         <div className="relative w-full h-[230px]">
           <Image
-            src={image}
+            src={`${BLOGS_BASE_URL}${coverImage}`}
             alt={title}
             fill
             className="object-fill rounded-md"
@@ -31,20 +34,20 @@ const BlogCard = ({ index, blog }: { index: number; blog: Blog }) => {
         </div>
         <div className="mt-5">
           <h3 className="text-white font-bold text-[24px] line-clamp-2">{title}</h3>
-          <p className="mt-2 text-secondary text-[14px] line-clamp-3">{description}</p>
+          <p className="mt-2 text-secondary text-[14px] line-clamp-3">{excerpt}</p>
         </div>
 
         <div className="my-3 flex flex-wrap gap-2">
           <span className="text-sm bg-pink-300 px-3 py-1 rounded-lg text-black-200">
-            {category}
+            {readTime}
           </span>
-          {subCategory && (
+          {author && (
             <span className="text-sm bg-blue-200 px-3 py-1 rounded-lg text-black-200">
-              {subCategory}
+              <b>Author :</b> {author}
             </span>
           )}
         </div>
-        <span className="text-sm text-slate-400">Published on : {createdAt}</span>
+        <span className="text-sm text-slate-400">Published on : {formatDate(date)}</span>
       </Tilt>
     </motion.div>
   );

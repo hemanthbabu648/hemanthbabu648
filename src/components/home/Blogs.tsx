@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
-import { latestBlogs, projects } from '@/constants/home';
 import { BLOGS_SITE_URL } from '@/constants/navigation';
 import SectionWrapper from '@/hooks/SectionWrapper';
+import { getAllBlogs } from '@/services/blogs';
+import { Blog } from '@/types';
 import { fadeIn, textVariant } from '@/utils/motion';
 
 import BlogCard from './BlogCard';
@@ -10,7 +12,17 @@ import NewsLetter from './NewsLetter';
 import ViewAllCard from './ViewAllCard';
 
 const Blogs = () => {
-  const lastIndex = projects.length - 1;
+  const [blogs, setBlogs] = useState<Blog[]>([]);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      const res = await getAllBlogs();
+      setBlogs(res.data.posts || []);
+    };
+    fetchBlogs();
+  }, []);
+
+  const lastIndex = blogs.length - 1;
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -33,8 +45,8 @@ const Blogs = () => {
         </motion.p>
       </div>
       <div className="mt-20 flex flex-wrap gap-7">
-        {latestBlogs.map((blog, index) => (
-          <BlogCard key={`blog-${blog.id}`} index={index} blog={blog} />
+        {blogs.map((blog, index) => (
+          <BlogCard key={`blog-${blog.slug}`} index={index} blog={blog} />
         ))}
 
         <ViewAllCard
