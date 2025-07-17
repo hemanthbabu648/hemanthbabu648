@@ -1,15 +1,28 @@
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
-import { projects } from '@/constants/home';
 import { APPS_SITE_URL } from '@/constants/navigation';
 import SectionWrapper from '@/hooks/SectionWrapper';
+import { getAllProjects } from '@/services/projects';
+import { Project, ProjectsAPIResponse } from '@/types';
 import { fadeIn, textVariant } from '@/utils/motion';
 
 import ProjectCard from './ProjectCard';
 import ViewAllCard from './ViewAllCard';
 
 const Projects = () => {
+  const [projects, setProjects] = useState<Project[]>([]);
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      const res: ProjectsAPIResponse = await getAllProjects();
+      setProjects(res.data.projects || []);
+    };
+    fetchProjects();
+  }, []);
+
   const lastIndex = projects.length - 1;
+
   return (
     <>
       <motion.div variants={textVariant()}>

@@ -10,7 +10,7 @@ const prodConfig = {
 
 const devConfig = {
   BLOGS_API_URL: 'http://localhost:3001/api',
-  APPS_API_URL: 'http://localhost:3001/api',
+  APPS_API_URL: 'http://localhost:3002/api',
 };
 
 const config = isProd ? prodConfig : devConfig;
