@@ -1,8 +1,8 @@
-import { motion } from "motion/react";
+import { motion } from 'motion/react';
 import { useEffect, useState } from 'react';
 
 import { APPS_SITE_URL } from '@/constants/navigation';
-import NoMotionSectionWrapper from "@/hooks/NoMotionSectionWrapper";
+import NoMotionSectionWrapper from '@/hooks/NoMotionSectionWrapper';
 import { getAllProjects } from '@/services/projects';
 import { Project, ProjectsAPIResponse } from '@/types';
 import { textVariant } from '@/utils/motion';

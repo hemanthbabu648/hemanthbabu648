@@ -86,7 +86,7 @@ export default function AboutMePage() {
       <section className="mb-10">
         <h2 className="text-2xl font-bold mb-3 text-violet-450">Featured Project</h2>
         <Image
-          src="/images/Projects/finance-tracker.png"
+          src="https://apps.hemanthbabu648.com/projects/finance-tracker.png"
           alt="Finance Tracker Project"
           width={400}
           height={200}

@@ -65,7 +65,7 @@ type SocialNav = {
 export const socialIcons: SocialNav[] = [
   {
     title: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/hemanthbabu648/',
+    url: 'https://www.linkedin.com/in/hemanthbabu648',
     icon: FaLinkedin,
     className: 'hover:underline text-blue-300',
   },
@@ -83,7 +83,7 @@ export const socialIcons: SocialNav[] = [
   },
   {
     title: 'WhatsApp',
-    url: 'https://wa.me/919989191478',
+    url: 'https://wa.me/919490980700',
     icon: FaWhatsapp,
     className: 'hover:underline text-orange-200 ',
   },
