@@ -41,7 +41,7 @@ const Hero = () => {
           <div className="flex justify-center items-center sm:flex-1">
             <motion.img
               initial={{
-                x: 200,
+                x: 0,
                 opacity: 0,
               }}
               transition={{

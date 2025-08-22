@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 import { BLOGS_SITE_URL } from '@/constants/navigation';
-import SectionWrapper from '@/hooks/SectionWrapper';
+import NoMotionSectionWrapper from '@/hooks/NoMotionSectionWrapper';
 import { getAllBlogs } from '@/services/blogs';
 import { Blog } from '@/types';
 import { fadeIn, textVariant } from '@/utils/motion';
@@ -61,4 +61,4 @@ const Blogs = () => {
   );
 };
 
-export default SectionWrapper(Blogs, 'blogs');
+export default NoMotionSectionWrapper(Blogs, 'blogs');
