@@ -31,6 +31,8 @@ import { TbBrandMantine } from 'react-icons/tb';
 
 import type { IconType } from 'react-icons';
 
+export const YEARS_OF_EXPERIENCE = '3+';
+
 type Service = {
   title: string;
   icon: React.ReactNode;

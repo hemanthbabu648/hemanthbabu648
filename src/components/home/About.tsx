@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Tilt } from 'react-tilt';
 
-import { services } from '../../constants/home';
+import { services, YEARS_OF_EXPERIENCE } from '../../constants/home';
 import SectionWrapper from '../../hooks/SectionWrapper';
 import { fadeIn, textVariant } from '../../utils/motion';
 
@@ -55,7 +55,7 @@ const About = () => {
         variants={fadeIn('', '', 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        I&apos;m a passionate software developer with over 2.5 years of professional experience,
+        I&apos;m a passionate software developer with over {YEARS_OF_EXPERIENCE} years of professional experience,
         specializing in front-end development for both web and mobile platforms. I have hands-on
         expertise in HTML, CSS, and JavaScript, working extensively with libraries like React, React
         Native (with Expo), and Node.js. I also leverage modern frameworks and tools such as

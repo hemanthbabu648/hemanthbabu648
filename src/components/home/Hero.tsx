@@ -3,6 +3,8 @@
 import { motion } from 'framer-motion';
 import { Download } from 'lucide-react';
 
+import { YEARS_OF_EXPERIENCE } from '@/constants/home';
+
 const Hero = () => {
   return (
     <section className="relative w-full h-[calc(100vh-4rem)] mx-auto bg-image-pattern bg-cover bg-no-repeat bg-center">
@@ -22,7 +24,7 @@ const Hero = () => {
             <p className="text-violet-200 font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px]">
               I build sleek, responsive user interfaces and dynamic web apps, along with
               high-quality mobile applications — backed by{' '}
-              <span className="orange-text-gradient">2.5+ years</span> of front-end expertise.
+              <span className="orange-text-gradient">{YEARS_OF_EXPERIENCE} years</span> of front-end expertise.
             </p>
 
             <motion.button

@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-import { socialIcons } from '@/constants/home';
+import { socialIcons, YEARS_OF_EXPERIENCE } from '@/constants/home';
 
 export default function AboutMePage() {
   return (
@@ -42,7 +42,7 @@ export default function AboutMePage() {
         </div>
         <p className="text-lg max-w-2xl">
           I build sleek, responsive user interfaces and dynamic web apps, along with high-quality
-          mobile applications — backed by 2.5+ years of front-end expertise.
+          mobile applications — backed by {YEARS_OF_EXPERIENCE} years of front-end expertise.
         </p>
       </section>
 
@@ -51,7 +51,7 @@ export default function AboutMePage() {
         <h2 className="text-2xl font-bold mb-3 text-violet-450">The Skinny…</h2>
         <p className="mb-2">
           I&apos;m a web developer, mobile developer and content creator from India. I&apos;ve been
-          making websites for over 2.5+ years and mobile apps just 6 months! My main focus is
+          making websites for over {YEARS_OF_EXPERIENCE} years and mobile apps just 6 months! My main focus is
           React.js, Next.js, React Native, Expo, Node.js, and building modern, scalable web and
           mobile apps.
         </p>
