@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import React from 'react';
 
-import { socialIcons } from '@/constants/home';
+import { SITE_LAST_UPDATED, socialIcons } from '@/constants/home';
 import { globalFooterNavLinks } from '@/constants/navigation';
 
 const GlobalFooter = () => (
@@ -36,7 +36,8 @@ const GlobalFooter = () => (
 
     {/* Copyright */}
     <div className="text-center text-sm text-gray-500 mt-6">
-      &copy; {new Date().getFullYear()} Hemanth Babu Setti. All rights reserved.
+      <p>&copy; {new Date().getFullYear()} Hemanth Babu Setti. All rights reserved.</p>
+      <p className='font-bold'>Last updated at : {SITE_LAST_UPDATED}</p>
     </div>
   </footer>
 );

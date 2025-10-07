@@ -33,6 +33,8 @@ import type { IconType } from 'react-icons';
 
 export const YEARS_OF_EXPERIENCE = '3+';
 
+export const SITE_LAST_UPDATED = '07 Oct 2025';
+
 type Service = {
   title: string;
   icon: React.ReactNode;
@@ -148,46 +150,31 @@ export type Experience = {
 
 export const experiences: Experience[] = [
   {
-    title: 'Front-end Developer',
-    company_name: 'Bytup Technologies Pvt Ltd',
+    title: 'SDE - I',
+    company_name: 'Bytup Technologies',
     icon: '/images/companies/bytup.png',
     iconBg: '#E6DEDD',
-    date: 'Feb 2025 - Present',
+    date: 'July 2023 - Present',
     points: [
-      'Developed AI-driven mock interview platform (PrepAce) using Next.js, Tailwind CSS, Redux Toolkit, Server Actions, and Generative APIs.',
-      'Implemented advanced feedback mechanisms and integrated video recording features for enhanced user analysis.',
-      'Integrated real-time analytics and performance insights to improve user progress tracking.',
-      "Led the development of 'Any UNI', a university discovery platform with SEO-optimized routing, mentorship programs, and real-time application tracking.",
-      'Collaborated closely with designers and back-end teams to ship scalable and accessible features.',
-      'Actively participated in code reviews to ensure clean, maintainable code across projects.',
+      'Built dedicated dashboards for Agents and Admins with customized interfaces and features tailored to specific user roles.',
+      'Implemented property listing management, real-time inquiry tracking, lead management, and performance analytics using Redux Toolkit and TanStack Query for efficient state and data handling.',
+      'Developed robust administrative tools including role management, dynamic system settings, analytics dashboards, and content moderation with Open APIs and scalable front-end architecture.',
+      'Wrote unit and integration tests with Jest, ensuring component reliability and optimizing performance for responsiveness, cross-browser compatibility, and accessibility.',
+      'Created dynamic and nested routes in Next.js with SEO-friendly URLs, using route parameters to fetch and render API-driven content.',
+      'Collaborated with design and backend teams to implement UI/UX designs and integrate front-end features with backend services.',
     ],
   },
   {
-    title: 'Junior Front-end Developer',
-    company_name: 'Bytup Technologies Pvt Ltd',
+    title: 'Software Development Intern',
+    company_name: 'Bytup Technologies',
     icon: '/images/companies/bytup.png',
     iconBg: '#383E56',
-    date: 'Aug 2023 - Jan 2025',
+    date: 'Sept 2022 - Jun 2023',
     points: [
-      'Built admin and agent dashboards for a property management system (Real) using React, Tailwind CSS, Redux Toolkit, and TanStack Query.',
-      'Implemented real-time inquiry tracking, listing management, and performance analytics with Open APIs.',
-      'Contributed to core administrative tools such as user roles, system settings, and moderation features.',
-      'Wrote unit and integration tests using Jest to maintain component reliability and app performance.',
-      'Participated in sprint planning and QA sessions to improve feature delivery cycles.',
-    ],
-  },
-  {
-    title: 'Trainee Front-end Developer',
-    company_name: 'Bytup Technologies Pvt Ltd',
-    icon: '/images/companies/bytup.png',
-    iconBg: '#E6DEDD',
-    date: 'Jan 2023 - July 2023',
-    points: [
-      'Contributed to the development of an E-learning platform using Next.js, Tailwind CSS, and Strapi CMS.',
-      'Implemented dashboards with personalized learning progress tracking and course management features.',
-      'Worked on course discovery UX by integrating advanced filtering and search functionality.',
-      'Collaborated with the design and back-end teams to deliver pixel-perfect, mobile-first responsive components.',
-      'Learned version control, component structure, and responsive design fundamentals in real-world projects.',
+      'Contributed to the development of HTML templates for web and mobile applications, enhancing front-end functionality.',
+      'Built responsive web pages using React JS, TailwindCSS, and Ant Design.',
+      'Optimized codebase by reducing HTML template complexity through JSON construction and iteration, resulting in improved code maintainability.',
+      'Integrated APIs to display dynamic content on dashboards.',
     ],
   },
 ];

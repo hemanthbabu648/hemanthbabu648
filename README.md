@@ -1,22 +1,22 @@
-# 👋 Hi there, I'm Hemanth Babu!
+# 👋 Hi there, I'm Hemanth Babu S!
 
 Welcome to my GitHub profile! I'm a passionate developer who enjoys building web applications, exploring new technologies, and solving real-world problems with code.
 
 ## 🚀 About Me
 
-- 🎓 I'm currently [your current status – e.g., "pursuing a degree in Computer Science" or "working as a Front-End Developer"]
-- 🌱 I’m currently learning: [e.g., React, TypeScript, or Docker]
-- 💼 Interested in: Web Development, UI/UX, Open Source
-- 🛠️ Tech Stack: HTML, CSS, JavaScript, React, Node.js, [add yours]
-- 📫 How to reach me: [your email] | [LinkedIn] | [Portfolio website]
+- 🎓 I'm currently working as a Software Development Engineer -1 at [Bytup Technologies](https://www.bytup.in/)
+<!-- - 🌱 I’m currently learning: Next.js, TypeScript, Cloud Architecture -->
+- 💼 Interested in: Web Development, UI/UX, Open Source, Mobile Apps
+- 🛠️ Tech Stack: JavaScript, TypeScript, React, Next.js, Node.js, Redux, Express, MongoDB
+- 📫 How to reach me: shemanthbabu170648@gmail.com | [LinkedIn](https://www.linkedin.com/in/hemanthbabu648/) | [Portfolio](https://hemanthbabu648.com)
 
 ## 🧰 Projects
 
 Here are some of my favorite projects:
 
-- 🔗 [**Personal Portfolio Website**](https://github.com/hemanthbabu648/personal-portfolio) – A responsive site to showcase my work and skills.
-- 🔗 [Project Name](project link) – Short description.
-- 🔗 [Project Name](project link) – Short description.
+- 🔗 [**Personal Portfolio Website**](https://github.com/hemanthbabu648/hemanthbabu648) – A responsive site to showcase my work and skills.
+- 🔗 [**Blogs Platform**](https://github.com/hemanthbabu648/mdx-blog) – A full-stack platform for publishing and managing technical blogs.
+- 🔗 [**Apps Dashboard**](https://github.com/hemanthbabu648/apps-hub) – A dashboard for managing and monitoring web applications.
 
 ## 📊 GitHub Stats
 
