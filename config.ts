@@ -2,7 +2,7 @@ import { MY_WEBSITES } from '@/constants/common';
 
 type EnvType = 'development' | 'production';
 
-const env: EnvType = 'production';
+const env: EnvType = 'development';
 
 export const localhost = 'http://localhost:3001';
 

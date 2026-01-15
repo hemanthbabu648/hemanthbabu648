@@ -14,7 +14,7 @@ export default function Hero() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentRoleIndex((prev) => (prev + 1) % HERO_SECTION.role.length);
+      setCurrentRoleIndex(prev => (prev + 1) % HERO_SECTION.role.length);
     }, 3000); // Change role every 3 seconds
 
     return () => clearInterval(interval);
@@ -37,17 +37,16 @@ export default function Hero() {
               <span className="np-text-gradient">{HERO_SECTION.name}</span>
             </h1>
             <h2 className="text-xl md:text-2xl text-white/90 font-medium mb-6 h-8 md:h-9">
-              <span
-                key={currentRoleIndex}
-                className="inline-block animate-fade-in-up"
-              >
+              <span key={currentRoleIndex} className="inline-block animate-fade-in-up">
                 {HERO_SECTION.role[currentRoleIndex]}
               </span>
             </h2>
             <p className="text-[var(--np-text-secondary)] mb-8 text-base md:text-lg leading-relaxed">
               {HERO_SECTION.description[0]}
               &nbsp;
-              <span className="text-[var(--np-accent-cyan)] font-semibold">{HERO_SECTION.yearsOfExperience} years</span>
+              <span className="text-[var(--np-accent-cyan)] font-semibold">
+                {HERO_SECTION.yearsOfExperience} years
+              </span>
               &nbsp;
               {HERO_SECTION.description[1]}
             </p>

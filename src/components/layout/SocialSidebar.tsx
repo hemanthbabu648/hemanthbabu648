@@ -15,7 +15,7 @@ export default function SocialSidebar() {
 
       {/* Social Icons */}
       <div className="flex flex-col gap-3">
-        {socialLinks.map((social) => {
+        {socialLinks.map(social => {
           const Icon = social.icon;
           return (
             <a

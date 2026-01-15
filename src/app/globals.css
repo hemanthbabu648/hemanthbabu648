@@ -346,7 +346,8 @@ body {
 
 /* Animated Border */
 @keyframes borderGlow {
-  0%, 100% {
+  0%,
+  100% {
     border-color: rgba(145, 94, 255, 0.3);
   }
   50% {
@@ -360,7 +361,8 @@ body {
 
 /* Floating Animation */
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -374,7 +376,8 @@ body {
 
 /* Pulse Glow */
 @keyframes pulseGlow {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: 0 0 5px rgba(145, 94, 255, 0.5);
   }
   50% {

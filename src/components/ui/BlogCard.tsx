@@ -66,7 +66,7 @@ export default function BlogCard({
         {tags.length > 0 && (
           <div className="px-5 pt-4">
             <div className="flex flex-wrap gap-2">
-              {tags.slice(0, 3).map((tag) => (
+              {tags.slice(0, 3).map(tag => (
                 <span
                   key={tag}
                   className="px-2 py-1 text-xs rounded bg-[var(--np-accent-purple)]/10 text-[var(--np-accent-purple)] font-medium"
@@ -95,7 +95,10 @@ export default function BlogCard({
             </div>
             <span className="flex items-center gap-1 text-[var(--np-accent-purple)] text-sm font-medium group-hover:gap-2 transition-all">
               Read more
-              <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              <ArrowUpRight
+                size={16}
+                className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+              />
             </span>
           </div>
         </div>

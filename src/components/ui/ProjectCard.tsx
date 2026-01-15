@@ -33,11 +33,8 @@ export default function ProjectCard({
         <div className="relative p-5">
           {/* Tags */}
           <div className="flex flex-wrap gap-2 mb-3">
-            {tags.map((tag) => (
-              <span
-                key={tag}
-                className="text-[var(--np-accent-purple)] text-xs font-medium"
-              >
+            {tags.map(tag => (
+              <span key={tag} className="text-[var(--np-accent-purple)] text-xs font-medium">
                 {tag}
               </span>
             ))}
@@ -106,7 +103,7 @@ export default function ProjectCard({
         {/* Tags */}
         <div className="px-5 py-3 border-b border-[var(--np-border-muted)]/50">
           <div className="flex flex-wrap gap-2">
-            {tags.map((tag) => (
+            {tags.map(tag => (
               <span
                 key={tag}
                 className="px-2 py-1 text-xs rounded bg-[var(--np-accent-purple)]/10 text-[var(--np-accent-purple)] font-medium"

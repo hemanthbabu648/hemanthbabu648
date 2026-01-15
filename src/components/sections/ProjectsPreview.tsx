@@ -25,7 +25,7 @@ export default function ProjectsPreview() {
   const hasMore = visibleCount < projects.length;
 
   const handleLoadMore = () => {
-    setVisibleCount((prev) => prev + PROJECTS_PER_PAGE);
+    setVisibleCount(prev => prev + PROJECTS_PER_PAGE);
   };
 
   useEffect(() => {
@@ -54,7 +54,7 @@ export default function ProjectsPreview() {
         {/* Loading State */}
         {loading && (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3].map((i) => (
+            {[1, 2, 3].map(i => (
               <ProjectCardSkeleton key={i} />
             ))}
           </div>
@@ -108,7 +108,11 @@ export default function ProjectsPreview() {
             {/* Load More Button */}
             {hasMore && (
               <div className="mt-10 text-center">
-                <Button variant="secondary" onClick={handleLoadMore} className="px-6 py-3 rounded-lg">
+                <Button
+                  variant="secondary"
+                  onClick={handleLoadMore}
+                  className="px-6 py-3 rounded-lg"
+                >
                   Load More
                 </Button>
               </div>

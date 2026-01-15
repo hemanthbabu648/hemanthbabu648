@@ -1,4 +1,3 @@
-
 import AboutPreview from '@/components//sections/AboutPreview';
 import BlogsPreview from '@/components//sections/BlogsPreview';
 import ContactsPreview from '@/components//sections/ContactsPreview';

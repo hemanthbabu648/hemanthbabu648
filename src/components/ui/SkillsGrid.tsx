@@ -1,4 +1,4 @@
-import { SKILLS } from "@/constants/content";
+import { SKILLS } from '@/constants/content';
 
 function SkillsGrid() {
   return (
@@ -12,10 +12,11 @@ function SkillsGrid() {
           {SKILLS.map((skill, index) => (
             <div
               key={skill.category}
-              className={`relative p-5 group/item transition-all duration-300 hover:bg-[var(--np-accent-purple)]/5 ${index < SKILLS.length - 1
-                ? 'border-r border-b lg:border-b-0 border-[var(--np-border-muted)]/50'
-                : ''
-                }`}
+              className={`relative p-5 group/item transition-all duration-300 hover:bg-[var(--np-accent-purple)]/5 ${
+                index < SKILLS.length - 1
+                  ? 'border-r border-b lg:border-b-0 border-[var(--np-border-muted)]/50'
+                  : ''
+              }`}
             >
               {/* Category Header */}
               <h4 className="text-white font-semibold mb-4 flex items-center gap-2 group-hover/item:text-[var(--np-accent-purple)] transition-colors">

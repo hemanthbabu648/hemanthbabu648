@@ -1,4 +1,4 @@
-import { QOUTE } from "@/constants/content";
+import { QOUTE } from '@/constants/content';
 
 export default function Quote() {
   return (

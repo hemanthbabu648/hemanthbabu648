@@ -47,15 +47,16 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
+          {navLinks.map(link => (
             <Link
               key={link.name}
               href={link.href}
               onClick={() => setActive(link.name)}
-              className={`text-sm transition-colors ${active === link.name
-                ? 'text-white border-b-2 border-[var(--np-accent-purple)] pb-1'
-                : 'np-link hover:text-white'
-                }`}
+              className={`text-sm transition-colors ${
+                active === link.name
+                  ? 'text-white border-b-2 border-[var(--np-accent-purple)] pb-1'
+                  : 'np-link hover:text-white'
+              }`}
             >
               {link.name}
             </Link>
@@ -77,14 +78,15 @@ export default function Header() {
       {isOpen && (
         <div className="md:hidden bg-[var(--np-bg-secondary)] border-t border-[var(--np-border-muted)]">
           <nav className="flex flex-col p-4">
-            {navLinks.map((link) => (
+            {navLinks.map(link => (
               <Link
                 key={link.name}
                 href={link.href}
-                className={`py-3 text-lg transition-colors ${active === link.name
-                  ? 'text-white border-b-2 border-[var(--np-accent-purple)] w-fit'
-                  : 'np-link hover:text-white'
-                  }`}
+                className={`py-3 text-lg transition-colors ${
+                  active === link.name
+                    ? 'text-white border-b-2 border-[var(--np-accent-purple)] w-fit'
+                    : 'np-link hover:text-white'
+                }`}
                 onClick={() => {
                   setActive(link.name);
                   setIsOpen(false);
@@ -94,7 +96,7 @@ export default function Header() {
               </Link>
             ))}
             <div className="flex gap-4 mt-4 pt-4 border-t border-[var(--np-border-muted)]">
-              {socialLinks.map((social) => {
+              {socialLinks.map(social => {
                 const Icon = iconMap[social.icon];
                 return (
                   <a
