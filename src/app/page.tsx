@@ -1,46 +1,62 @@
-'use client';
+import AboutPreview from '@/components//sections/AboutPreview';
+import BlogsPreview from '@/components//sections/BlogsPreview';
+import ContactsPreview from '@/components//sections/ContactsPreview';
+import Hero from '@/components//sections/Hero';
+import ProjectsPreview from '@/components//sections/ProjectsPreview';
+import Quote from '@/components//sections/Quote';
+import SkillsPreview from '@/components//sections/SkillsPreview';
+import DotPattern from '@/components/layout/DotPattern';
+import SocialSidebar from '@/components/layout/SocialSidebar';
 
-import About from '@/components/home/About';
-import Blogs from '@/components/home/Blogs';
-import Contact from '@/components/home/Contact';
-import Experiences from '@/components/home/Experiences';
-import Hero from '@/components/home/Hero';
-import Projects from '@/components/home/Projects';
-import TechSkills from '@/components/home/TechSkills';
-import { socialIcons } from '@/constants/home';
+// Homepage specific structured data for better SEO
+const homePageJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfilePage',
+  mainEntity: {
+    '@type': 'Person',
+    name: 'Hemanth Babu Setti',
+    alternateName: 'hemanthbabu648',
+    description:
+      'Full Stack Developer with 3+ years of experience in React, Next.js, React Native, and TypeScript.',
+    image: 'https://www.hemanthbabu648.com/images/developer.webp',
+    jobTitle: 'Full Stack Developer',
+    worksFor: {
+      '@type': 'Organization',
+      name: 'Bytup Technologies',
+    },
+    url: 'https://www.hemanthbabu648.com',
+    sameAs: [
+      'https://github.com/hemanthbabu648',
+      'https://www.linkedin.com/in/hemanthbabu648',
+      'https://twitter.com/hemanthbabu648',
+      'https://www.instagram.com/hemanthbabu648',
+    ],
+  },
+};
 
-function Home() {
+export default function Home() {
   return (
     <>
-      <Hero />
-      <About />
-      <div className="hidden fixed top-[30%] right-0 w-16 h-80 z-40 sm:flex items-center">
-        <div className="w-full h-full flex flex-col justify-center items-center space-y-5 bg-gradient-to-br from-purple-700 via-violet-800 to-indigo-900 border-l-2 border-green-300 shadow-[0_0_30px_#22c55e88] rounded-l-2xl backdrop-blur-md">
-          {socialIcons.map(({ title, url, icon: Icon }) => (
-            <a
-              key={title}
-              href={url}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={title}
-              className="group relative p-3 rounded-full bg-black/50 hover:bg-white transition duration-300 shadow-md hover:scale-110 hover:shadow-[0_0_15px_#22c55e88]"
-            >
-              <Icon
-                size={22}
-                className="text-green-300 group-hover:text-black transition-all duration-300"
-              />
-              <span className="absolute top-1 right-1 w-2 h-2 bg-green-500 rounded-full animate-ping" />
-            </a>
-          ))}
-        </div>
+      {/* Structured Data for Homepage */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homePageJsonLd) }}
+      />
+
+      <div className="relative">
+        {/* Decorative Elements */}
+        <DotPattern position="right" />
+        <SocialSidebar />
+
+        {/* Page Sections */}
+        <Hero />
+        <Quote />
+        <ProjectsPreview />
+        <SkillsPreview />
+        <BlogsPreview />
+        <AboutPreview />
+        <ContactsPreview />
       </div>
-      <Experiences />
-      <Projects />
-      <TechSkills />
-      <Blogs />
-      <Contact />
     </>
   );
 }
-
-export default Home;

@@ -1,130 +1,350 @@
 import Image from 'next/image';
-import Link from 'next/link';
-import React from 'react';
 
-import { socialIcons, YEARS_OF_EXPERIENCE } from '@/constants/home';
+import DotPattern from '@/components/layout/DotPattern';
+import Button from '@/components/ui/Button';
+import CodeSnippet from '@/components/ui/CodeSnippet';
+import ProfileImage from '@/components/ui/ProfileImage';
+import SectionTitle from '@/components/ui/SectionTitle';
+import SkillsGrid from '@/components/ui/SkillsGrid';
+import { PROFILE, MY_WEBSITES } from '@/constants/common';
+import { SKILLS } from '@/constants/content';
+
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About Me',
+  description: `Discover ${PROFILE.name} — a ${PROFILE.role[0]} with ${PROFILE.yearsOfExperience} years of experience building modern web and mobile applications with React, Next.js, and React Native. Based in Bangalore, India.`,
+  keywords: [
+    `About ${PROFILE.name}`,
+    'Full Stack Developer',
+    'React Developer',
+    'Bangalore Developer',
+    'Software Engineer India',
+  ],
+  openGraph: {
+    title: `About Me | ${PROFILE.name}`,
+    description: `Discover ${PROFILE.name} — a ${PROFILE.role[0]} specializing in React, Next.js, and modern web development.`,
+    url: 'https://www.hemanthbabu648.com/about-me',
+  },
+};
+
+const funFacts = [
+  {
+    text: 'Passionate about exploring emerging technologies and crafting developer tools',
+    icon: '💻',
+  },
+  {
+    text: 'Finding joy in the art of debugging — every bug is a puzzle waiting to be solved',
+    icon: '🐛',
+  },
+  {
+    text: 'Reconnecting with nature through gardening and visits to agricultural farms',
+    icon: '🌱',
+  },
+  {
+    text: 'Committed to continuous learning — there is always something new to discover',
+    icon: '📚',
+  },
+  { text: 'Sharing insights and experiences through technical writing and blogs', icon: '✍️' },
+  { text: 'Transforming ideas into reality through creative side projects', icon: '🚀' },
+];
+
+const socialLinks = [
+  { title: 'GitHub', url: PROFILE.github },
+  { title: 'LinkedIn', url: PROFILE.linkedin },
+  { title: 'Twitter', url: PROFILE.twitter },
+  { title: 'Instagram', url: PROFILE.instagram },
+];
 
 export default function AboutMePage() {
   return (
-    <main className="max-w-3xl mx-auto px-4 py-12">
-      {/* Hero Section */}
-      <section className="mb-10 flex flex-col items-center text-center">
-        <Image
-          src="/images/developer.jpeg"
-          alt="Hemanth Babu Setti"
-          width={320}
-          height={220}
-          className="rounded-2xl shadow-lg mb-6 object-cover w-48 h-48"
-        />
-        <h1 className="text-4xl font-extrabold mb-2 text-violet-450 tracking-tight">
-          Hey, I&apos;m Hemanth Babu Setti
-        </h1>
-        <p className="text-xl mb-4">
-          Web Developer, Mobile Developer, Content Creator, Learner and <br /> Re-Searcher from
-          India 🇮🇳
-        </p>
-        <div className="flex flex-wrap gap-3 justify-center mb-6">
-          <span className="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
-            JavaScript
-          </span>
-          <span className="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
-            React
-          </span>
-          <span className="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
-            React Native
-          </span>
-          <span className="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">
-            Next.js
-          </span>
-          <span className="inline-block bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm font-medium">
-            Expo
-          </span>
+    <main className="pt-24 pb-16 relative">
+      {/* Decorative Elements */}
+      <DotPattern position="left" />
+      <DotPattern position="right" />
+
+      {/* Background Gradients */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[var(--np-accent-purple)]/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[var(--np-accent-cyan)]/10 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="max-w-6xl mx-auto px-4 relative">
+        {/* Header */}
+        <div className="mb-12 opacity-0 animate-fade-in" style={{ animationFillMode: 'forwards' }}>
+          <h1 className="text-4xl font-bold mb-3">
+            <span className="np-hashtag">/</span>about-me
+          </h1>
+          <p className="text-[var(--np-text-secondary)] text-lg">The story behind the code</p>
         </div>
-        <p className="text-lg max-w-2xl">
-          I build sleek, responsive user interfaces and dynamic web apps, along with high-quality
-          mobile applications — backed by {YEARS_OF_EXPERIENCE} years of front-end expertise.
-        </p>
-      </section>
 
-      {/* The Skinny */}
-      <section className="mb-10">
-        <h2 className="text-2xl font-bold mb-3 text-violet-450">The Skinny…</h2>
-        <p className="mb-2">
-          I&apos;m a web developer, mobile developer and content creator from India. I&apos;ve been
-          making websites for over {YEARS_OF_EXPERIENCE} years and mobile apps just 6 months! My main focus is
-          React.js, Next.js, React Native, Expo, Node.js, and building modern, scalable web and
-          mobile apps.
-        </p>
-        <p className="mb-2">
-          I love sharing knowledge through blogs. I&apos;m always learning and enjoy solving
-          real-world problems with technology.
-        </p>
-      </section>
-
-      {/* A little more */}
-      <section className="mb-10">
-        <h2 className="text-2xl font-bold mb-3 text-violet-450">A little more…</h2>
-        <Image
-          src="/images/developer.webp"
-          alt="Hemanth Babu Setti and family"
-          width={320}
-          height={220}
-          className="rounded-xl shadow mb-4 object-cover w-full max-w-md mx-auto"
-        />
-        <p className="mb-2">
-          I&apos;ve been in love with web development for most of my life. I enjoy hacking on new
-          tech, building tools, and making things work better. I live in Bangalore often goes to
-          home town and love spending time at agriculture farms and exploring new places.
-        </p>
-        <p className="mb-2">
-          My hobbies include gardening, looking the farm, some times reading books, and fixing
-          things around the house. I&apos;m always up for a challenge and love learning new skills.
-        </p>
-      </section>
-
-      {/* Featured Project/Course */}
-      <section className="mb-10">
-        <h2 className="text-2xl font-bold mb-3 text-violet-450">Featured Project</h2>
-        <Image
-          src="https://apps.hemanthbabu648.com/projects/finance-tracker.png"
-          alt="Finance Tracker Project"
-          width={400}
-          height={200}
-          className="rounded-xl shadow mb-4 object-cover w-full max-w-md mx-auto"
-        />
-        <p className="text-gray-700 dark:text-gray-300 mb-2">
-          <span className="font-semibold">Finance Tracker</span> is a modern web app to help you
-          manage your expenses and income, built with Next.js, React, and Tailwind CSS. It&apos;s a
-          great example of my approach to building practical, user-friendly applications.
-        </p>
-        <Link href="/" className="inline-block mt-2 text-violet-450 hover:underline font-semibold">
-          View Project
-        </Link>
-      </section>
-
-      {/* Additional Links */}
-      <section className="mb-10">
-        <h2 className="text-2xl font-bold mb-3 text-violet-450">Find Me Online</h2>
-        <ul className="flex flex-wrap gap-4">
-          <li>
-            <a
-              href="https://github.com/hemanthbabu648"
-              target="_blank"
-              rel="noopener"
-              className="hover:underline"
+        {/* Bio Section */}
+        <section className="mb-20">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            {/* Left: Text with Glass Card */}
+            <div
+              className="opacity-0 animate-fade-in"
+              style={{ animationDelay: '150ms', animationFillMode: 'forwards' }}
             >
-              GitHub
-            </a>
-          </li>
-          {socialIcons.map(icon => (
-            <li key={icon.title}>
-              <a href={icon.url} target="_blank" rel="noopener" className={icon.className}>
-                {icon.title}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </section>
+              <div className="relative group">
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-[var(--np-accent-purple)]/20 to-[var(--np-accent-cyan)]/20 rounded-xl opacity-0 group-hover:opacity-100 blur transition-opacity duration-500" />
+                <div className="relative bg-[var(--np-bg-secondary)]/60 backdrop-blur-sm rounded-xl p-6 border border-[var(--np-border-muted)] group-hover:border-[var(--np-accent-purple)]/30 transition-colors">
+                  <p className="text-[var(--np-text-secondary)] mb-4 leading-relaxed">
+                    Hey there! I&apos;m{' '}
+                    <span className="text-[var(--np-accent-purple)] font-semibold">
+                      {PROFILE.name}
+                    </span>
+                    .
+                  </p>
+                  <p className="text-[var(--np-text-secondary)] mb-4 leading-relaxed">
+                    As a {PROFILE.role[0]} with{' '}
+                    <span className="text-[var(--np-accent-purple)]">
+                      {PROFILE.yearsOfExperience} years
+                    </span>{' '}
+                    of hands-on experience, I specialize in crafting seamless digital experiences
+                    across web and mobile platforms. Currently based in{' '}
+                    <span className="text-[var(--np-accent-cyan)]">Bangalore, India</span>.
+                  </p>
+                  <p className="text-[var(--np-text-secondary)] mb-4 leading-relaxed">
+                    My toolkit spans the modern JavaScript ecosystem — from building interactive UIs
+                    with
+                    <span className="text-[var(--np-accent-cyan)]"> React</span> and{' '}
+                    <span className="text-[var(--np-accent-cyan)]">React Native</span> to
+                    server-side development with{' '}
+                    <span className="text-[var(--np-accent-cyan)]">Node.js</span>. I work with
+                    frameworks like <span className="text-[var(--np-accent-cyan)]">Next.js</span>{' '}
+                    and <span className="text-[var(--np-accent-cyan)]">Tailwind CSS</span> to
+                    deliver performant, scalable applications.
+                  </p>
+                  <p className="text-[var(--np-text-secondary)] leading-relaxed">
+                    What drives me? Turning complex problems into elegant solutions. I thrive on
+                    collaboration and am dedicated to building products that make a real difference
+                    for users and businesses alike.
+                  </p>
+                </div>
+              </div>
+
+              {/* Code Snippet */}
+              <div className="mt-6">
+                <CodeSnippet variableName="developer" items={PROFILE.role} animationDelay="400ms" />
+              </div>
+            </div>
+
+            {/* Right: Profile Image */}
+            <ProfileImage
+              src="/images/developer.webp"
+              alt={PROFILE.name}
+              badge={`${PROFILE.yearsOfExperience} Years`}
+            />
+          </div>
+        </section>
+
+        {/* A Little More Section */}
+        <section
+          className="mb-20 opacity-0 animate-fade-in"
+          style={{ animationDelay: '350ms', animationFillMode: 'forwards' }}
+        >
+          <SectionTitle title="a-little-more" />
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="relative group order-2 md:order-1">
+              <div className="absolute -inset-2 bg-gradient-to-br from-[var(--np-accent-purple)]/20 to-[var(--np-accent-cyan)]/20 rounded-xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <Image
+                src="/images/developer.webp"
+                alt={PROFILE.name}
+                width={400}
+                height={300}
+                className="relative rounded-xl shadow-lg object-cover w-full max-w-md mx-auto grayscale group-hover:grayscale-0 transition-all duration-500"
+              />
+            </div>
+            <div className="relative group order-1 md:order-2">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-[var(--np-accent-purple)]/20 to-[var(--np-accent-cyan)]/20 rounded-xl opacity-0 group-hover:opacity-100 blur transition-opacity duration-500" />
+              <div className="relative bg-[var(--np-bg-secondary)]/60 backdrop-blur-sm rounded-xl p-6 border border-[var(--np-border-muted)] group-hover:border-[var(--np-accent-purple)]/30 transition-colors">
+                <p className="text-[var(--np-text-secondary)] mb-4 leading-relaxed">
+                  Web development has been more than a career — it&apos;s a genuine passion that
+                  drives me every day. I find immense satisfaction in experimenting with new
+                  technologies, building tools that solve real problems, and constantly refining my
+                  craft. While <span className="text-[var(--np-accent-cyan)]">Bangalore</span> is
+                  where I work, my roots lie in my hometown, where I often return to reconnect with
+                  agricultural life and explore the countryside.
+                </p>
+                <p className="text-[var(--np-text-secondary)] leading-relaxed">
+                  Beyond the screen, you&apos;ll find me tending to my garden, caring for the family
+                  farm, diving into a good book, or tackling DIY projects around the house. I
+                  believe in embracing challenges head-on and never stopping the pursuit of new
+                  skills and knowledge.
+                </p>
+
+                {/* Quick Stats */}
+                <div className="mt-6 grid grid-cols-2 gap-4">
+                  <div className="text-center p-3 rounded-lg bg-[var(--np-bg-tertiary)]/50 border border-[var(--np-border-muted)]">
+                    <p className="text-2xl font-bold text-[var(--np-accent-purple)]">
+                      {PROFILE.yearsOfExperience}
+                    </p>
+                    <p className="text-xs text-[var(--np-text-muted)]">Years Experience</p>
+                  </div>
+                  {/* <div className="text-center p-3 rounded-lg bg-[var(--np-bg-tertiary)]/50 border border-[var(--np-border-muted)]">
+                    <p className="text-2xl font-bold text-[var(--np-accent-cyan)]">20+</p>
+                    <p className="text-xs text-[var(--np-text-muted)]">Projects Completed</p>
+                  </div> */}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Skills Section */}
+        <section
+          className="mb-20 opacity-0 animate-fade-in"
+          style={{ animationDelay: '450ms', animationFillMode: 'forwards' }}
+        >
+          <SectionTitle title="skills" />
+          <SkillsGrid />
+
+          {/* Skills Code Snippet */}
+          <div className="mt-8 flex justify-center">
+            <div className="bg-[var(--np-bg-secondary)]/60 backdrop-blur-sm rounded-xl p-6 border border-[var(--np-border-muted)]">
+              <CodeSnippet
+                variableName="techStack"
+                items={SKILLS.flatMap(s => s.items).slice(0, 8)}
+                animationDelay="600ms"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Featured Project Section */}
+        <section
+          className="mb-20 opacity-0 animate-fade-in"
+          style={{ animationDelay: '500ms', animationFillMode: 'forwards' }}
+        >
+          <SectionTitle title="featured-project" />
+          <div className="relative group max-w-2xl mx-auto">
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-[var(--np-accent-purple)] to-[var(--np-accent-cyan)] rounded-xl opacity-0 group-hover:opacity-20 blur transition-opacity duration-300" />
+            <div className="relative bg-[var(--np-bg-secondary)]/60 backdrop-blur-sm rounded-xl p-6 border border-[var(--np-border-muted)] group-hover:border-[var(--np-accent-purple)]/30 transition-colors">
+              <div className="relative overflow-hidden rounded-lg mb-4">
+                <Image
+                  src={`${MY_WEBSITES.apps}/projects/finance-tracker.png`}
+                  alt="Finance Tracker Project"
+                  width={600}
+                  height={300}
+                  className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[var(--np-bg-primary)]/60 to-transparent" />
+              </div>
+              <p className="text-[var(--np-text-secondary)] mb-4 leading-relaxed">
+                <span className="font-semibold text-[var(--np-accent-purple)]">
+                  Finance Tracker
+                </span>{' '}
+                — a comprehensive web application designed to simplify personal finance management.
+                Built with Next.js, React, and Tailwind CSS, this project showcases my commitment to
+                creating intuitive, user-centric applications that solve everyday problems.
+              </p>
+              <Button href={MY_WEBSITES.apps} variant="secondary">
+                View All Projects →
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* Fun Facts Section */}
+        <section
+          className="mb-20 opacity-0 animate-fade-in"
+          style={{ animationDelay: '550ms', animationFillMode: 'forwards' }}
+        >
+          <SectionTitle title="my-fun-facts" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {funFacts.map((fact, index) => (
+              <div
+                key={index}
+                className="group relative overflow-hidden opacity-0 animate-fade-in"
+                style={{ animationDelay: `${600 + index * 100}ms`, animationFillMode: 'forwards' }}
+              >
+                {/* Hover Glow */}
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-[var(--np-accent-purple)] to-[var(--np-accent-cyan)] rounded-xl opacity-0 group-hover:opacity-20 blur transition-opacity duration-300" />
+
+                {/* Card */}
+                <div className="relative bg-[var(--np-bg-secondary)]/60 backdrop-blur-sm rounded-xl p-5 border border-[var(--np-border-muted)] group-hover:border-[var(--np-accent-purple)]/30 transition-all duration-300 h-full">
+                  <div className="flex items-start gap-4">
+                    <span className="text-2xl group-hover:scale-110 transition-transform duration-300">
+                      {fact.icon}
+                    </span>
+                    <p className="text-[var(--np-text-secondary)] text-sm leading-relaxed">
+                      {fact.text}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Find Me Online Section */}
+        <section
+          className="opacity-0 animate-fade-in"
+          style={{ animationDelay: '700ms', animationFillMode: 'forwards' }}
+        >
+          <SectionTitle title="find-me-online" />
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Social Links Card */}
+            <div className="relative group">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-[var(--np-accent-purple)]/20 to-[var(--np-accent-cyan)]/20 rounded-xl opacity-0 group-hover:opacity-100 blur transition-opacity duration-500" />
+              <div className="relative bg-[var(--np-bg-secondary)]/60 backdrop-blur-sm rounded-xl p-6 border border-[var(--np-border-muted)] group-hover:border-[var(--np-accent-purple)]/30 transition-colors h-full">
+                <h3 className="text-lg font-semibold mb-4 text-white">Let&apos;s Connect</h3>
+                <ul className="space-y-3">
+                  {socialLinks.map(link => (
+                    <li key={link.title}>
+                      <a
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-3 p-2 rounded-lg hover:bg-[var(--np-accent-purple)]/10 transition-colors group/link"
+                      >
+                        <span className="w-8 h-8 rounded-lg bg-[var(--np-accent-purple)]/10 flex items-center justify-center group-hover/link:bg-[var(--np-accent-purple)]/20 transition-colors">
+                          <span className="text-[var(--np-accent-purple)] text-sm">@</span>
+                        </span>
+                        <span className="text-[var(--np-text-secondary)] group-hover/link:text-[var(--np-accent-purple)] transition-colors">
+                          {link.title}
+                        </span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Contact Info Card */}
+            <div className="relative group">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-[var(--np-accent-cyan)]/20 to-[var(--np-accent-purple)]/20 rounded-xl opacity-0 group-hover:opacity-100 blur transition-opacity duration-500" />
+              <div className="relative bg-[var(--np-bg-secondary)]/60 backdrop-blur-sm rounded-xl p-6 border border-[var(--np-border-muted)] group-hover:border-[var(--np-accent-cyan)]/30 transition-colors h-full">
+                <h3 className="text-lg font-semibold mb-4 text-white">Reach Out</h3>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <span className="w-8 h-8 rounded-lg bg-[var(--np-accent-cyan)]/10 flex items-center justify-center">
+                      <span className="text-[var(--np-accent-cyan)] text-sm">@</span>
+                    </span>
+                    <a
+                      href={`mailto:${PROFILE.email}`}
+                      className="text-[var(--np-text-secondary)] hover:text-[var(--np-accent-cyan)] transition-colors"
+                    >
+                      {PROFILE.email}
+                    </a>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="w-8 h-8 rounded-lg bg-[var(--np-accent-cyan)]/10 flex items-center justify-center">
+                      <span className="text-[var(--np-accent-cyan)] text-sm">#</span>
+                    </span>
+                    <span className="text-[var(--np-text-secondary)]">{PROFILE.phoneNumber}</span>
+                  </div>
+                </div>
+
+                <div className="mt-6">
+                  <Button href={PROFILE.resumeUrl} variant="primary" external>
+                    Download Resume
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
   );
 }
