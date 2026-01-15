@@ -213,3 +213,239 @@ body {
   padding-bottom: 100px;
   display: block;
 }
+
+/* ========== NEW PORTFOLIO DESIGN SYSTEM ========== */
+:root {
+  /* New Portfolio Colors - Using Original Space Theme */
+  --np-bg-primary: #050816;
+  --np-bg-secondary: #100d25;
+  --np-bg-tertiary: #151030;
+  --np-accent-purple: #915eff;
+  --np-accent-violet: #804dee;
+  --np-accent-cyan: #00cea8;
+  --np-accent-pink: #bf61ff;
+  --np-text-primary: #f3f3f3;
+  --np-text-secondary: #aaa6c3;
+  --np-text-muted: #6b7280;
+  --np-border-color: #915eff;
+  --np-border-muted: #2a2545;
+}
+
+/* New Portfolio Base Styles */
+.np-container {
+  background-color: var(--np-bg-primary);
+  color: var(--np-text-primary);
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+/* Hashtag Section Titles */
+.np-hashtag {
+  color: var(--np-accent-purple);
+}
+
+/* Violet Text Gradient */
+.np-text-gradient {
+  background: linear-gradient(90deg, #915eff 0%, #00cea8 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Decorative Dot Pattern */
+.np-dot-pattern {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.5) 1px, transparent 1px);
+  background-size: 12px 12px;
+}
+
+/* New Portfolio Card */
+.np-card {
+  border: 1px solid var(--np-border-muted);
+  background: linear-gradient(135deg, rgba(16, 13, 37, 0.9) 0%, rgba(21, 16, 48, 0.9) 100%);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.np-card:hover {
+  border-color: var(--np-accent-purple);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 40px rgba(145, 94, 255, 0.15);
+}
+
+/* New Portfolio Button Styles */
+.np-btn-primary {
+  border: 1px solid var(--np-accent-purple);
+  color: var(--np-text-primary);
+  background: linear-gradient(135deg, rgba(145, 94, 255, 0.2) 0%, rgba(128, 77, 238, 0.1) 100%);
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.np-btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(145, 94, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.np-btn-primary:hover::before {
+  left: 100%;
+}
+
+.np-btn-primary:hover {
+  background: linear-gradient(135deg, rgba(145, 94, 255, 0.4) 0%, rgba(128, 77, 238, 0.3) 100%);
+  box-shadow: 0 0 20px rgba(145, 94, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.np-btn-secondary {
+  border: 1px solid var(--np-border-muted);
+  color: var(--np-text-primary);
+  background: transparent;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.np-btn-secondary:hover {
+  background-color: rgba(145, 94, 255, 0.1);
+  border-color: var(--np-accent-purple);
+}
+
+/* New Portfolio Link Styles */
+.np-link {
+  color: var(--np-text-secondary);
+  transition: all 0.3s ease;
+}
+
+.np-link:hover {
+  color: var(--np-accent-purple);
+}
+
+/* Section Divider Line */
+.np-divider {
+  height: 2px;
+  background: linear-gradient(90deg, var(--np-accent-purple) 0%, transparent 100%);
+}
+
+/* Glow Effect */
+.np-glow {
+  box-shadow: 0 0 30px rgba(145, 94, 255, 0.3);
+}
+
+/* Glass Card Effect */
+.np-glass {
+  background: rgba(16, 13, 37, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(145, 94, 255, 0.2);
+}
+
+/* Animated Border */
+@keyframes borderGlow {
+  0%, 100% {
+    border-color: rgba(145, 94, 255, 0.3);
+  }
+  50% {
+    border-color: rgba(145, 94, 255, 0.8);
+  }
+}
+
+.np-border-glow {
+  animation: borderGlow 2s ease-in-out infinite;
+}
+
+/* Floating Animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.np-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Pulse Glow */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(145, 94, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(145, 94, 255, 0.8);
+  }
+}
+
+.np-pulse-glow {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Scale In Animation */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.5s ease-out;
+}
+
+/* Slide Up Animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.6s ease-out;
+}
+
+/* Role Cycling Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease-out forwards;
+}

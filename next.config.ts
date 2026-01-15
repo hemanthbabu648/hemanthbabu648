@@ -24,6 +24,12 @@ const nextConfig: NextConfig = {
         hostname: 'www.apps.hemanthbabu648.com',
         pathname: '/**',
       },
+      // {
+      //   protocol: 'http',
+      //   hostname: 'localhost',
+      //   port: '3001',
+      //   pathname: '/**',
+      // },
     ],
   },
 };

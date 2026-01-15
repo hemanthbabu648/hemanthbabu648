@@ -7,7 +7,7 @@ import { getAllProjects } from '@/services/projects';
 import { Project, ProjectsAPIResponse } from '@/types';
 import { textVariant } from '@/utils/motion';
 
-import ProjectCard from './ProjectCard';
+// import ProjectCard from './ProjectCard';
 import ViewAllCard from './ViewAllCard';
 
 const Projects = () => {
@@ -44,7 +44,7 @@ const Projects = () => {
           and manage projects effectively.
         </motion.p>
       </div>
-      <div className="mt-20 flex flex-wrap gap-7">
+      {/* <div className="mt-20 flex flex-wrap gap-7">
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} project={project} />
         ))}
@@ -55,7 +55,7 @@ const Projects = () => {
           para="Explore the full list of my work, including web apps, mobile apps, and more."
           url={APPS_SITE_URL}
         />
-      </div>
+      </div> */}
     </>
   );
 };
