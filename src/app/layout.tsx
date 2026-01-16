@@ -1,5 +1,6 @@
 import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
+import TerminalChatbot from '@/components/TerminalChatbot/TerminalChatbot';
 
 import type { Metadata, Viewport } from 'next';
 
@@ -200,7 +201,7 @@ export const metadata: Metadata = {
   // Other meta tags
   other: {
     'msapplication-TileColor': '#050816',
-    'apple-mobile-web-app-capable': 'yes',
+    'mobile-web-app-capable': 'yes',
     'apple-mobile-web-app-status-bar-style': 'black-translucent',
     'apple-mobile-web-app-title': siteConfig.name,
   },
@@ -302,6 +303,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <TerminalChatbot />
       </body>
     </html>
   );
