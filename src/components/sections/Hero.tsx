@@ -75,6 +75,7 @@ export default function Hero() {
                   src="/images/developer.webp"
                   alt="Hemanth Babu Setti"
                   fill
+                  sizes="(max-width: 768px) 256px, 320px"
                   className="object-cover object-top"
                   priority
                 />

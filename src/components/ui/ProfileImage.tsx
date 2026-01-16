@@ -22,6 +22,7 @@ export default function ProfileImage({ src, alt, badge }: ProfileImageProps) {
             src={src}
             alt={alt}
             fill
+            sizes="256px"
             className="object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-500"
           />
           {/* Gradient Overlay */}
