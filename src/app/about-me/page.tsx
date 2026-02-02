@@ -127,6 +127,7 @@ export default function AboutMePage() {
               src="/images/developer.webp"
               alt={PROFILE.name}
               badge={`${PROFILE.yearsOfExperience} Years`}
+              priority
             />
           </div>
         </section>

@@ -4,9 +4,10 @@ interface ProfileImageProps {
   src: string;
   alt: string;
   badge?: string;
+  priority?: boolean;
 }
 
-export default function ProfileImage({ src, alt, badge }: ProfileImageProps) {
+export default function ProfileImage({ src, alt, badge, priority }: ProfileImageProps) {
   return (
     <div
       className="relative flex justify-center md:justify-end opacity-0 animate-fade-in"
@@ -23,6 +24,7 @@ export default function ProfileImage({ src, alt, badge }: ProfileImageProps) {
             alt={alt}
             fill
             sizes="256px"
+            priority={priority}
             className="object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-500"
           />
           {/* Gradient Overlay */}
