@@ -204,10 +204,6 @@ body {
 }
 
 /* Utility Classes */
-.bg-image-pattern {
-  background-image: url('/images/imagebg.png');
-}
-
 .hash-span {
   margin-top: -100px;
   padding-bottom: 100px;

@@ -76,8 +76,6 @@ A modern, professional portfolio website for **Hemanth Babu Setti** - Full-Stack
 ├── /images
 │   ├── developer.jpeg
 │   ├── developer.webp
-│   ├── imagebg.png
-│   └── /companies/bytup.png
 ├── /docs
 │   └── hemanth_babu_setti_resume.pdf
 ├── logo.svg

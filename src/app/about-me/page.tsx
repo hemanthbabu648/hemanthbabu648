@@ -8,23 +8,17 @@ import SectionTitle from '@/components/ui/SectionTitle';
 import SkillsGrid from '@/components/ui/SkillsGrid';
 import { PROFILE, MY_WEBSITES } from '@/constants/common';
 import { SKILLS } from '@/constants/content';
+import { siteConfig } from '@/constants/seo';
 
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'About Me',
-  description: `Discover ${PROFILE.name} — a ${PROFILE.role[0]} with ${PROFILE.yearsOfExperience} years of experience building modern web and mobile applications with React, Next.js, and React Native. Based in Bangalore, India.`,
-  keywords: [
-    `About ${PROFILE.name}`,
-    'Full Stack Developer',
-    'React Developer',
-    'Bangalore Developer',
-    'Software Engineer India',
-  ],
+  description: `Discover ${siteConfig.name} — a ${PROFILE.role[0]} with ${PROFILE.yearsOfExperience} years of experience building modern web and mobile applications with React, Next.js, and React Native.`,
   openGraph: {
-    title: `About Me | ${PROFILE.name}`,
-    description: `Discover ${PROFILE.name} — a ${PROFILE.role[0]} specializing in React, Next.js, and modern web development.`,
-    url: 'https://www.hemanthbabu648.com/about-me',
+    title: `About Me | ${siteConfig.name}`,
+    description: `Discover ${siteConfig.name} — a ${PROFILE.role[0]} specializing in React, Next.js, and modern web development.`,
+    url: `${siteConfig.url}/about-me`,
   },
 };
 
