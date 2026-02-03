@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import { MY_WEBSITES } from '@/constants/common';
 
 import { getAllProjects } from '../../services/projects';
-import { Project, ProjectsAPIResponse } from '../../types';
+import { Project, ProjectsAPIResponse } from '../../types/types';
 import Button from '../ui/Button';
 import ErrorState from '../ui/ErrorState';
 import ProjectCard from '../ui/ProjectCard';
@@ -46,7 +46,7 @@ export default function ProjectsPreview() {
   return (
     <section id="projects" className="py-16 md:py-24 relative">
       {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[var(--np-accent-purple)]/5 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[var(--accent-purple)]/5 to-transparent pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-4 relative">
         <SectionTitle title="projects" showViewAll viewAllHref={MY_WEBSITES.apps} />

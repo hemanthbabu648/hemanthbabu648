@@ -11,7 +11,7 @@ export default function SocialSidebar() {
   return (
     <div className="fixed left-4 xl:left-8 top-1/2 -translate-y-1/2 hidden lg:flex flex-col items-center gap-2 z-20">
       {/* Vertical Line */}
-      <div className="w-px h-8 bg-[var(--np-text-secondary)]" />
+      <div className="w-px h-8 bg-[var(--text-secondary)]" />
 
       {/* Social Icons */}
       <div className="flex flex-col gap-3">
@@ -23,7 +23,7 @@ export default function SocialSidebar() {
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[var(--np-text-secondary)] hover:text-white transition-colors"
+              className="text-[var(--text-secondary)] hover:text-white transition-colors"
               aria-label={social.name}
             >
               <Icon size={20} />
@@ -33,7 +33,7 @@ export default function SocialSidebar() {
       </div>
 
       {/* Vertical Line */}
-      <div className="w-px h-8 bg-[var(--np-text-secondary)]" />
+      <div className="w-px h-8 bg-[var(--text-secondary)]" />
     </div>
   );
 }

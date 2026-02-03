@@ -13,9 +13,9 @@ const iconMap: Record<string, LucideIcon> = {
 
 export default function Footer() {
   return (
-    <footer className="border-t border-[var(--np-border-muted)]/50 py-10 mt-20 relative">
+    <footer className="border-t border-[var(--border-muted)]/50 py-10 mt-20 relative">
       {/* Gradient Line at Top */}
-      <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[var(--np-accent-purple)] to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[var(--accent-purple)] to-transparent" />
 
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
@@ -24,7 +24,7 @@ export default function Footer() {
             <Link href="/" className="text-white font-bold text-xl inline-flex items-center gap-1">
               {PROFILE.name}
             </Link>
-            <p className="text-[var(--np-text-secondary)] text-sm mt-2">{PROFILE.role[0]}</p>
+            <p className="text-[var(--text-secondary)] text-sm mt-2">{PROFILE.role[0]}</p>
           </div>
 
           {/* Right: Media */}
@@ -39,7 +39,7 @@ export default function Footer() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[var(--np-text-secondary)] hover:text-[var(--np-accent-purple)] transition-all hover:scale-110"
+                    className="text-[var(--text-secondary)] hover:text-[var(--accent-purple)] transition-all hover:scale-110"
                     aria-label={social.name}
                   >
                     <Icon size={22} />
@@ -51,9 +51,9 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <p className="text-center text-[var(--np-text-muted)] text-sm mt-10">
+        <p className="text-center text-[var(--text-muted)] text-sm mt-10">
           © Copyright {new Date().getFullYear()}. Made with{' '}
-          <span className="text-[var(--np-accent-purple)]">♥</span> {PROFILE.name}.
+          <span className="text-[var(--accent-purple)]">♥</span> {PROFILE.name}.
         </p>
       </div>
     </footer>

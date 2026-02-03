@@ -8,7 +8,7 @@ export default function ContactsPreview() {
   return (
     <section id="contacts" className="py-16 md:py-24 relative">
       {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[var(--np-accent-purple)]/5 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[var(--accent-purple)]/5 to-transparent pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-4 relative">
         <SectionTitle title="contacts" />
@@ -19,9 +19,9 @@ export default function ContactsPreview() {
             className="opacity-0 animate-fade-in"
             style={{ animationDelay: '100ms', animationFillMode: 'forwards' }}
           >
-            <p className="text-[var(--np-text-secondary)] text-lg leading-relaxed mb-6">
+            <p className="text-[var(--text-secondary)] text-lg leading-relaxed mb-6">
               I&apos;m interested in{' '}
-              <span className="text-[var(--np-accent-purple)]">new opportunities</span>. However, if
+              <span className="text-[var(--accent-purple)]">new opportunities</span>. However, if
               you have other request or question, don&apos;t hesitate to contact me.
             </p>
 

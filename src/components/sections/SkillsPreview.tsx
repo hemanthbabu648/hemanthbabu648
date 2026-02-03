@@ -6,7 +6,7 @@ export default function SkillsPreview() {
   return (
     <section id="skills" className="py-16 md:py-24 relative">
       {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[var(--np-accent-cyan)]/5 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[var(--accent-cyan)]/5 to-transparent pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="grid md:grid-cols-5 gap-8 lg:gap-12 items-center">
@@ -17,8 +17,8 @@ export default function SkillsPreview() {
               className="flex flex-col items-start gap-6 opacity-0 animate-fade-in"
               style={{ animationDelay: '300ms', animationFillMode: 'forwards' }}
             >
-              <div className="w-14 h-14 lg:w-16 lg:h-16 border border-white/30 relative group hover:border-[var(--np-accent-purple)] transition-colors duration-300">
-                <div className="absolute inset-0 bg-[var(--np-accent-purple)]/0 group-hover:bg-[var(--np-accent-purple)]/10 transition-all duration-300" />
+              <div className="w-14 h-14 lg:w-16 lg:h-16 border border-white/30 relative group hover:border-[var(--accent-purple)] transition-colors duration-300">
+                <div className="absolute inset-0 bg-[var(--accent-purple)]/0 group-hover:bg-[var(--accent-purple)]/10 transition-all duration-300" />
               </div>
 
               {/* Code Snippet Decoration */}
@@ -26,10 +26,10 @@ export default function SkillsPreview() {
                 <CodeSnippet items={['creativity', 'passion', 'dedication']} />
               </div>
 
-              <div className="w-14 h-14 lg:w-16 lg:h-16 border border-[var(--np-accent-purple)]/50 ml-10 relative group hover:border-[var(--np-accent-cyan)] transition-colors duration-300">
-                <div className="absolute inset-0 bg-[var(--np-accent-cyan)]/0 group-hover:bg-[var(--np-accent-cyan)]/10 transition-all duration-300" />
+              <div className="w-14 h-14 lg:w-16 lg:h-16 border border-[var(--accent-purple)]/50 ml-10 relative group hover:border-[var(--accent-cyan)] transition-colors duration-300">
+                <div className="absolute inset-0 bg-[var(--accent-cyan)]/0 group-hover:bg-[var(--accent-cyan)]/10 transition-all duration-300" />
                 {/* Glowing Corner */}
-                <div className="absolute -top-1 -right-1 w-2 h-2 bg-[var(--np-accent-purple)] rounded-full animate-pulse" />
+                <div className="absolute -top-1 -right-1 w-2 h-2 bg-[var(--accent-purple)] rounded-full animate-pulse" />
               </div>
             </div>
           </div>

@@ -29,7 +29,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
       </head>
-      <body className="np-container antialiased">
+      <body className="antialiased">
         <Header />
         <main id="main-content" role="main">
           {children}

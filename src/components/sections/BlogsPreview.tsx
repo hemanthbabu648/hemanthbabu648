@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 
 import { MY_WEBSITES } from '@/constants/common';
 
-import { Blog } from '../../types';
+import { Blog } from '../../types/types';
 import BlogCard from '../ui/BlogCard';
 import BlogCardSkeleton from '../ui/BlogCardSkeleton';
 import Button from '../ui/Button';
@@ -49,12 +49,12 @@ export default function BlogsPreview() {
   return (
     <section id="blogs" className="py-16 md:py-24 relative">
       {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[var(--np-accent-cyan)]/5 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[var(--accent-cyan)]/5 to-transparent pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-4 relative">
         <SectionTitle title="blogs" showViewAll viewAllHref={MY_WEBSITES.blogs} />
 
-        <p className="text-[var(--np-text-secondary)] mb-8 max-w-2xl leading-relaxed">
+        <p className="text-[var(--text-secondary)] mb-8 max-w-2xl leading-relaxed">
           Discover my technical blogs and latest news where I share insights on front-end
           development, modern frameworks, industry trends, and real-world coding practices.
         </p>

@@ -22,7 +22,7 @@ export default function Header() {
   const [active, setActive] = useState('');
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-[var(--np-bg-primary)]/90 backdrop-blur-md border-b border-[var(--np-border-muted)]/50">
+    <header className="fixed top-0 w-full z-50 bg-[var(--bg-primary)]/90 backdrop-blur-md border-b border-[var(--border-muted)]/50">
       <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link
@@ -54,8 +54,8 @@ export default function Header() {
               onClick={() => setActive(link.name)}
               className={`text-sm transition-colors ${
                 active === link.name
-                  ? 'text-white border-b-2 border-[var(--np-accent-purple)] pb-1'
-                  : 'np-link hover:text-white'
+                  ? 'text-white border-b-2 border-[var(--accent-purple)] pb-1'
+                  : 'link hover:text-white'
               }`}
             >
               {link.name}
@@ -76,7 +76,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-[var(--np-bg-secondary)] border-t border-[var(--np-border-muted)]">
+        <div className="md:hidden bg-[var(--bg-secondary)] border-t border-[var(--border-muted)]">
           <nav className="flex flex-col p-4">
             {navLinks.map(link => (
               <Link
@@ -84,8 +84,8 @@ export default function Header() {
                 href={link.href}
                 className={`py-3 text-lg transition-colors ${
                   active === link.name
-                    ? 'text-white border-b-2 border-[var(--np-accent-purple)] w-fit'
-                    : 'np-link hover:text-white'
+                    ? 'text-white border-b-2 border-[var(--accent-purple)] w-fit'
+                    : 'link hover:text-white'
                 }`}
                 onClick={() => {
                   setActive(link.name);
@@ -95,7 +95,7 @@ export default function Header() {
                 {link.name}
               </Link>
             ))}
-            <div className="flex gap-4 mt-4 pt-4 border-t border-[var(--np-border-muted)]">
+            <div className="flex gap-4 mt-4 pt-4 border-t border-[var(--border-muted)]">
               {socialLinks.map(social => {
                 const Icon = iconMap[social.icon];
                 return (
@@ -104,7 +104,7 @@ export default function Header() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[var(--np-text-secondary)] hover:text-[var(--np-accent-purple)] transition-all hover:scale-110"
+                    className="text-[var(--text-secondary)] hover:text-[var(--accent-purple)] transition-all hover:scale-110"
                     aria-label={social.name}
                   >
                     <Icon size={22} />

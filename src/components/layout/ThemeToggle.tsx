@@ -26,7 +26,7 @@ export default function ThemeToggle() {
   if (!mounted) {
     return (
       <button
-        className="p-2 rounded-lg text-[var(--np-text-secondary)] hover:text-white hover:bg-[var(--np-bg-secondary)] transition-colors"
+        className="p-2 rounded-lg text-[var(--text-secondary)] hover:text-white hover:bg-[var(--bg-secondary)] transition-colors"
         aria-label="Toggle theme"
       >
         <Sun size={20} />
@@ -37,7 +37,7 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 rounded-lg text-[var(--np-text-secondary)] hover:text-white hover:bg-[var(--np-bg-secondary)] transition-colors"
+      className="p-2 rounded-lg text-[var(--text-secondary)] hover:text-white hover:bg-[var(--bg-secondary)] transition-colors"
       aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
     >
       {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}

@@ -17,7 +17,7 @@ export default function Button({
   className = '',
   external = false,
 }: ButtonProps) {
-  const baseStyles = variant === 'primary' ? 'np-btn-primary' : 'np-btn-secondary';
+  const baseStyles = variant === 'primary' ? 'btn-primary' : 'btn-secondary';
   const styles = `${baseStyles} ${className} inline-block text-sm font-medium`;
 
   if (href) {
