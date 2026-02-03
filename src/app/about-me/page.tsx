@@ -175,6 +175,7 @@ export default function AboutMePage() {
                     </p>
                     <p className="text-xs text-[var(--text-muted)]">Years Experience</p>
                   </div>
+                  {/* TODO: Enable once project count is dynamic */}
                   {/* <div className="text-center p-3 rounded-lg bg-[var(--bg-tertiary)]/50 border border-[var(--border-muted)]">
                     <p className="text-2xl font-bold text-[var(--accent-cyan)]">20+</p>
                     <p className="text-xs text-[var(--text-muted)]">Projects Completed</p>

@@ -36,9 +36,8 @@ export default function BlogsPreview() {
         }
         const data = await response.json();
         setBlogs(data.data?.posts || []);
-      } catch (err) {
+      } catch {
         setError('Unable to load blogs');
-        console.error('Error fetching blogs:', err);
       } finally {
         setLoading(false);
       }

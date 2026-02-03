@@ -6,7 +6,7 @@ const env: EnvType = 'development';
 
 export const localhost = 'http://localhost:3001';
 
-export const devSiteConfig = {
+const devSiteConfig = {
   BLOGS_BASE_URL: localhost,
   APPS_BASE_URL: localhost,
 };

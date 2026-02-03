@@ -14,6 +14,7 @@ export const getAllBlogs = async () => {
   }
 };
 
+// TODO: Integrate news section in the UI
 export const getAllNews = async () => {
   try {
     const response = await fetch(`${config.BLOGS_API_URL}/news`);

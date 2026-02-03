@@ -33,9 +33,8 @@ export default function ProjectsPreview() {
       try {
         const res: ProjectsAPIResponse = await getAllProjects();
         setProjects(res.data.projects || []);
-      } catch (err) {
+      } catch {
         setError('Unable to load projects');
-        console.error('Error fetching projects:', err);
       } finally {
         setLoading(false);
       }
