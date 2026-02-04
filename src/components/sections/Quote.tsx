@@ -12,7 +12,7 @@ export default function Quote() {
               &ldquo;
             </span>
 
-            <p className="text-lg md:text-2xl text-white text-center py-4 font-medium">
+            <p className="text-lg md:text-2xl text-[var(--text-primary)] text-center py-4 font-medium">
               {QOUTE.text}
             </p>
 

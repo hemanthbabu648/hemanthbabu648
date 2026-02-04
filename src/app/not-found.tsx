@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const NotFound = () => {
   return (
-    <div className="h-[calc(100vh-8rem)] flex flex-col items-center justify-center bg-black-100 text-white px-4">
+    <div className="h-[calc(100vh-8rem)] flex flex-col items-center justify-center bg-black-100 text-[var(--text-primary)] px-4">
       <motion.h1
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}

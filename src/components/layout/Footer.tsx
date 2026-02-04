@@ -21,7 +21,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           {/* Left: Branding */}
           <div className="text-center md:text-left">
-            <Link href="/" className="text-white font-bold text-xl inline-flex items-center gap-1">
+            <Link href="/" className="text-[var(--text-primary)] font-bold text-xl inline-flex items-center gap-1">
               {PROFILE.name}
             </Link>
             <p className="text-[var(--text-secondary)] text-sm mt-2">{PROFILE.role[0]}</p>
@@ -29,7 +29,7 @@ export default function Footer() {
 
           {/* Right: Media */}
           <div className="text-center md:text-right">
-            <p className="text-white text-sm mb-4 font-medium">Media</p>
+            <p className="text-[var(--text-primary)] text-sm mb-4 font-medium">Media</p>
             <div className="flex gap-4 justify-center md:justify-end">
               {socialLinks.map(social => {
                 const Icon = iconMap[social.icon];

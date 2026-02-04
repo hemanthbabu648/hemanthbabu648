@@ -51,7 +51,7 @@ export default function ContactCard({
             <Send size={18} className="text-[var(--accent-purple)]" />
           </div>
           <div>
-            <p className="text-white font-semibold">{title}</p>
+            <p className="text-[var(--text-primary)] font-semibold">{title}</p>
             <p className="text-[var(--text-muted)] text-xs">{subtitle}</p>
           </div>
         </div>
@@ -75,7 +75,7 @@ export default function ContactCard({
                     <Icon size={16} className={accent.iconColor} />
                   </div>
                   <div>
-                    <p className="text-white text-sm font-medium">{link.label}</p>
+                    <p className="text-[var(--text-primary)] text-sm font-medium">{link.label}</p>
                     <p className="text-[var(--text-secondary)] text-xs">{link.handle}</p>
                   </div>
                 </a>

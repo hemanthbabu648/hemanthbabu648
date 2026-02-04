@@ -40,7 +40,7 @@ export default function Header() {
             height={30}
             className="object-contain rounded-full"
           />
-          <p className="text-white text-base sm:text-xl font-semibold md:font-extrabold cursor-pointer sm:hidden lg:block">
+          <p className="text-[var(--text-primary)] text-base sm:text-xl font-semibold md:font-extrabold cursor-pointer sm:hidden lg:block">
             {PROFILE.name}
           </p>
         </Link>
@@ -54,8 +54,8 @@ export default function Header() {
               onClick={() => setActive(link.name)}
               className={`text-sm transition-colors ${
                 active === link.name
-                  ? 'text-white border-b-2 border-[var(--accent-purple)] pb-1'
-                  : 'link hover:text-white'
+                  ? 'text-[var(--text-primary)] border-b-2 border-[var(--accent-purple)] pb-1'
+                  : 'link hover:text-[var(--text-primary)]'
               }`}
             >
               {link.name}
@@ -66,7 +66,7 @@ export default function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-white p-2"
+          className="md:hidden text-[var(--text-primary)] p-2"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
@@ -84,8 +84,8 @@ export default function Header() {
                 href={link.href}
                 className={`py-3 text-lg transition-colors ${
                   active === link.name
-                    ? 'text-white border-b-2 border-[var(--accent-purple)] w-fit'
-                    : 'link hover:text-white'
+                    ? 'text-[var(--text-primary)] border-b-2 border-[var(--accent-purple)] w-fit'
+                    : 'link hover:text-[var(--text-primary)]'
                 }`}
                 onClick={() => {
                   setActive(link.name);

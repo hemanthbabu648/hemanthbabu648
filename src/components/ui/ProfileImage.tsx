@@ -42,7 +42,7 @@ export default function ProfileImage({ src, alt, badge, priority }: ProfileImage
           {Array.from({ length: 25 }).map((_, i) => (
             <div
               key={i}
-              className="w-1 h-1 rounded-full bg-white/40 hover:bg-[var(--accent-purple)] transition-colors duration-200"
+              className="w-1 h-1 rounded-full bg-[var(--text-primary)]/40 hover:bg-[var(--accent-purple)] transition-colors duration-200"
             />
           ))}
         </div>

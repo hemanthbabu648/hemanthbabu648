@@ -23,7 +23,7 @@ export default function SocialSidebar() {
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[var(--text-secondary)] hover:text-white transition-colors"
+              className="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors"
               aria-label={social.name}
             >
               <Icon size={20} />

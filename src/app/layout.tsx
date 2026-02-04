@@ -15,6 +15,13 @@ export default function RootLayout({
   return (
     <html lang="en" dir="ltr">
       <head>
+        {/* Theme initialization - prevents flash of wrong theme in this way */}
+        {/* <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}document.documentElement.setAttribute('data-theme',t)})()`,
+          }}
+        /> */}
+
         {/* Preconnect to external domains for performance */}
         <link rel="preconnect" href="https://blogs.hemanthbabu648.com" />
         <link rel="preconnect" href="https://apps.hemanthbabu648.com" />

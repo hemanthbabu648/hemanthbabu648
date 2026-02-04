@@ -10,8 +10,7 @@ export default function ThemeToggle() {
   useEffect(() => {
     setMounted(true);
     const stored = localStorage.getItem('theme') as 'dark' | 'light' | null;
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const initialTheme = stored || (prefersDark ? 'dark' : 'light');
+    const initialTheme = stored || 'dark';
     setTheme(initialTheme);
     document.documentElement.setAttribute('data-theme', initialTheme);
   }, []);
@@ -26,7 +25,7 @@ export default function ThemeToggle() {
   if (!mounted) {
     return (
       <button
-        className="p-2 rounded-lg text-[var(--text-secondary)] hover:text-white hover:bg-[var(--bg-secondary)] transition-colors"
+        className="p-2 rounded-lg text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-secondary)] transition-colors"
         aria-label="Toggle theme"
       >
         <Sun size={20} />
@@ -37,7 +36,7 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 rounded-lg text-[var(--text-secondary)] hover:text-white hover:bg-[var(--bg-secondary)] transition-colors"
+      className="p-2 rounded-lg text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-secondary)] transition-colors"
       aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
     >
       {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}

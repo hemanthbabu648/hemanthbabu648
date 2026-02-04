@@ -20,7 +20,7 @@ export default function CodeSnippet({
       </div>
       {items.map((item, index) => (
         <div key={item} className="font-mono text-xs text-[var(--text-muted)] ml-4">
-          <span className="text-white/60">&quot;{item}&quot;</span>
+          <span className="text-[var(--text-primary)]/60">&quot;{item}&quot;</span>
           {index < items.length - 1 && ','}
         </div>
       ))}

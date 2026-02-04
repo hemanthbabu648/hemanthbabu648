@@ -283,7 +283,7 @@ export default function AboutMePage() {
             <div className="relative group">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-[var(--accent-purple)]/20 to-[var(--accent-cyan)]/20 rounded-xl opacity-0 group-hover:opacity-100 blur transition-opacity duration-500" />
               <div className="relative bg-[var(--bg-secondary)]/60 backdrop-blur-sm rounded-xl p-6 border border-[var(--border-muted)] group-hover:border-[var(--accent-purple)]/30 transition-colors h-full">
-                <h3 className="text-lg font-semibold mb-4 text-white">Let&apos;s Connect</h3>
+                <h3 className="text-lg font-semibold mb-4 text-[var(--text-primary)]">Let&apos;s Connect</h3>
                 <ul className="space-y-3">
                   {socialLinks.map(link => (
                     <li key={link.title}>
@@ -310,7 +310,7 @@ export default function AboutMePage() {
             <div className="relative group">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-[var(--accent-cyan)]/20 to-[var(--accent-purple)]/20 rounded-xl opacity-0 group-hover:opacity-100 blur transition-opacity duration-500" />
               <div className="relative bg-[var(--bg-secondary)]/60 backdrop-blur-sm rounded-xl p-6 border border-[var(--border-muted)] group-hover:border-[var(--accent-cyan)]/30 transition-colors h-full">
-                <h3 className="text-lg font-semibold mb-4 text-white">Reach Out</h3>
+                <h3 className="text-lg font-semibold mb-4 text-[var(--text-primary)]">Reach Out</h3>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
                     <span className="w-8 h-8 rounded-lg bg-[var(--accent-cyan)]/10 flex items-center justify-center">

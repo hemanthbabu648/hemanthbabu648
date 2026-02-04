@@ -41,7 +41,7 @@ export default function ProjectCard({
           </div>
 
           {/* Title */}
-          <h3 className="text-white font-semibold text-lg mb-2 group-hover:text-[var(--accent-purple)] transition-colors">
+          <h3 className="text-[var(--text-primary)] font-semibold text-lg mb-2 group-hover:text-[var(--accent-purple)] transition-colors">
             {title}
           </h3>
 
@@ -116,7 +116,7 @@ export default function ProjectCard({
 
         {/* Content */}
         <div className="p-5">
-          <h3 className="text-white font-semibold text-xl mb-2 group-hover:text-[var(--accent-purple)] transition-colors">
+          <h3 className="text-[var(--text-primary)] font-semibold text-xl mb-2 group-hover:text-[var(--accent-purple)] transition-colors">
             {title}
           </h3>
           <p className="text-[var(--text-secondary)] text-sm mb-5 line-clamp-2 leading-relaxed">

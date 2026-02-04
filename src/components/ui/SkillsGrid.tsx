@@ -19,7 +19,7 @@ function SkillsGrid() {
               }`}
             >
               {/* Category Header */}
-              <h4 className="text-white font-semibold mb-4 flex items-center gap-2 group-hover/item:text-[var(--accent-purple)] transition-colors">
+              <h4 className="text-[var(--text-primary)] font-semibold mb-4 flex items-center gap-2 group-hover/item:text-[var(--accent-purple)] transition-colors">
                 <span className="w-2 h-2 rounded-full bg-[var(--accent-purple)]" />
                 {skill.category}
               </h4>

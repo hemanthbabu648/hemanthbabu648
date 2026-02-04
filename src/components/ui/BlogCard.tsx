@@ -80,7 +80,7 @@ export default function BlogCard({
 
         {/* Content */}
         <div className="p-5 flex-1 flex flex-col">
-          <h3 className="text-white font-semibold text-lg mb-2 group-hover:text-[var(--accent-purple)] transition-colors line-clamp-2">
+          <h3 className="text-[var(--text-primary)] font-semibold text-lg mb-2 group-hover:text-[var(--accent-purple)] transition-colors line-clamp-2">
             {title}
           </h3>
           <p className="text-[var(--text-secondary)] text-sm mb-4 line-clamp-2 leading-relaxed flex-1">

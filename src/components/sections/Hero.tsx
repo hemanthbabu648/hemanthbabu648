@@ -36,7 +36,7 @@ export default function Hero() {
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
               <span className="text-gradient">{HERO_SECTION.name}</span>
             </h1>
-            <h2 className="text-xl md:text-2xl text-white/90 font-medium mb-6 h-8 md:h-9">
+            <h2 className="text-xl md:text-2xl text-[var(--text-primary)]/90 font-medium mb-6 h-8 md:h-9">
               <span key={currentRoleIndex} className="inline-block animate-fade-in-up">
                 {HERO_SECTION.role[currentRoleIndex]}
               </span>
@@ -92,7 +92,7 @@ export default function Hero() {
                   <span className="w-3 h-3 bg-green-400 rounded-full animate-pulse" />
                   <span className="text-[var(--text-secondary)] text-sm">
                     Currently working at{' '}
-                    <span className="text-white font-medium">{HERO_SECTION.currentCompany}</span>
+                    <span className="text-[var(--text-primary)] font-medium">{HERO_SECTION.currentCompany}</span>
                   </span>
                 </div>
               </div>

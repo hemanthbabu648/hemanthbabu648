@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 
+/* Default: dark theme */
 :root {
   --background: #050816;
   --foreground: #f3f3f3;
@@ -18,6 +19,33 @@
   --text-muted: #6b7280;
   --border-color: #915eff;
   --border-muted: #2a2545;
+
+  --glass-bg: rgba(16, 13, 37, 0.7);
+  --glass-border: rgba(145, 94, 255, 0.2);
+}
+
+/* Light theme: applied when user explicitly toggles */
+[data-theme='light'] {
+  --background: #faf8f5;
+  --foreground: #1a1a2e;
+  --black-100: #f0ede8;
+  --violet-450: #7c3aed;
+
+  --bg-primary: #faf8f5;
+  --bg-secondary: #f0ede8;
+  --bg-tertiary: #e8e4dd;
+  --accent-purple: #7c3aed;
+  --accent-violet: #6d28d9;
+  --accent-cyan: #059669;
+  --accent-pink: #a855f7;
+  --text-primary: #1a1a2e;
+  --text-secondary: #4a4a5a;
+  --text-muted: #8a8a9a;
+  --border-color: #7c3aed;
+  --border-muted: #d4d0c8;
+
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(124, 58, 237, 0.2);
 }
 
 @theme inline {
@@ -115,9 +143,9 @@ body {
 
 /* Glass Card Effect */
 .glass {
-  background: rgba(16, 13, 37, 0.7);
+  background: var(--glass-bg);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(145, 94, 255, 0.2);
+  border: 1px solid var(--glass-border);
 }
 
 /* Animated Border */
