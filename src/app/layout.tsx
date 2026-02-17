@@ -1,6 +1,7 @@
 import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
 import TerminalChatbot from '@/components/TerminalChatbot/TerminalChatbot';
+import CursorFollower from '@/components/ui/CursorFollower';
 import { jsonLd, websiteJsonLd } from '@/constants/seo';
 
 import './globals.css';
@@ -43,6 +44,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <TerminalChatbot />
+        <CursorFollower />
       </body>
     </html>
   );
