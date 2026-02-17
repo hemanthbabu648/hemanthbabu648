@@ -57,17 +57,21 @@ export default function TerminalChatbot() {
     let index = 0;
     const typingSpeed = 15;
 
-    setMessages((prev) => [...prev, { id: messageId, type: 'bot', content: '', isTyping: true }]);
+    setMessages(prev => [...prev, { id: messageId, type: 'bot', content: '', isTyping: true }]);
 
     const typeChar = () => {
       if (index < content.length) {
-        setMessages((prev) =>
-          prev.map((msg) => (msg.id === messageId ? { ...msg, content: content.slice(0, index + 1) } : msg))
+        setMessages(prev =>
+          prev.map(msg =>
+            msg.id === messageId ? { ...msg, content: content.slice(0, index + 1) } : msg
+          )
         );
         index++;
         setTimeout(typeChar, typingSpeed);
       } else {
-        setMessages((prev) => prev.map((msg) => (msg.id === messageId ? { ...msg, isTyping: false } : msg)));
+        setMessages(prev =>
+          prev.map(msg => (msg.id === messageId ? { ...msg, isTyping: false } : msg))
+        );
         setIsTyping(false);
       }
     };
@@ -103,7 +107,7 @@ export default function TerminalChatbot() {
     const botMessageId = `bot-${Date.now()}`;
 
     // Add user message
-    setMessages((prev) => [...prev, { id: userMessageId, type: 'user', content: userMessage }]);
+    setMessages(prev => [...prev, { id: userMessageId, type: 'user', content: userMessage }]);
     setInput('');
 
     // Immediately refocus input
@@ -121,7 +125,7 @@ export default function TerminalChatbot() {
             typeMessage("Great! What's your name?", botMessageId);
           }, 300);
         } else if (lowerInput === 'no' || lowerInput === 'n' || lowerInput === 'cancel') {
-          typeMessage("No problem! Feel free to ask me something else.", botMessageId);
+          typeMessage('No problem! Feel free to ask me something else.', botMessageId);
           resetCollection();
         } else {
           typeMessage("Please type 'yes' to continue or 'no' to cancel.", botMessageId);
@@ -130,11 +134,11 @@ export default function TerminalChatbot() {
       }
 
       case 'collecting_name': {
-        setContactInfo((prev) => ({ ...prev, name: userMessage }));
+        setContactInfo(prev => ({ ...prev, name: userMessage }));
         setCollectionStep('collecting_contact');
         setTimeout(() => {
           typeMessage(
-            "Thanks! Now please share your contact info (email, phone, or Telegram username) so Hemanth can reach you:",
+            'Thanks! Now please share your contact info (email, phone, or Telegram username) so Hemanth can reach you:',
             botMessageId
           );
         }, 300);
@@ -180,7 +184,10 @@ export default function TerminalChatbot() {
       setContactInfo({ question: userMessage });
       setCollectionStep('confirm');
       setTimeout(() => {
-        typeMessage(`${CHATBOT_CONFIG.unknownResponse}\n\nType 'yes' to send or 'no' to cancel.`, botMessageId);
+        typeMessage(
+          `${CHATBOT_CONFIG.unknownResponse}\n\nType 'yes' to send or 'no' to cancel.`,
+          botMessageId
+        );
       }, 300);
     }
   };
@@ -244,8 +251,14 @@ export default function TerminalChatbot() {
                   className="w-3 h-3 rounded-full bg-[#ff5f56] hover:bg-[#ff5f56]/80 transition-colors"
                   aria-label="Close"
                 />
-                <button className="w-3 h-3 rounded-full bg-[#ffbd2e] hover:bg-[#ffbd2e]/80 transition-colors disabled:opacity-90 disabled:cursor-not-allowed" disabled />
-                <button className="w-3 h-3 rounded-full bg-[#27c93f] hover:bg-[#27c93f]/80 transition-colors disabled:opacity-90 disabled:cursor-not-allowed" disabled />
+                <button
+                  className="w-3 h-3 rounded-full bg-[#ffbd2e] hover:bg-[#ffbd2e]/80 transition-colors disabled:opacity-90 disabled:cursor-not-allowed"
+                  disabled
+                />
+                <button
+                  className="w-3 h-3 rounded-full bg-[#27c93f] hover:bg-[#27c93f]/80 transition-colors disabled:opacity-90 disabled:cursor-not-allowed"
+                  disabled
+                />
               </div>
 
               {/* Title */}
@@ -258,14 +271,17 @@ export default function TerminalChatbot() {
               </div>
 
               {/* Clear Button */}
-              <button onClick={clearChat} className="text-[#00cea8] text-sm font-mono hover:text-[#00cea8]/80 transition-colors">
+              <button
+                onClick={clearChat}
+                className="text-[#00cea8] text-sm font-mono hover:text-[#00cea8]/80 transition-colors"
+              >
                 Clear
               </button>
             </div>
 
             {/* Messages Container */}
             <div className="flex-1 overflow-y-auto p-4 space-y-4 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent">
-              {messages.map((message) => (
+              {messages.map(message => (
                 <div key={message.id} className="font-mono text-sm">
                   {message.type === 'system' && (
                     <div className="text-[#00cea8]">
@@ -281,7 +297,9 @@ export default function TerminalChatbot() {
                   {message.type === 'bot' && (
                     <div className="pl-4 text-[#00cea8] whitespace-pre-wrap border-l-2 border-[#00cea8]/30">
                       {message.content}
-                      {message.isTyping && <span className="inline-block w-2 h-4 ml-1 bg-[#00cea8] animate-pulse" />}
+                      {message.isTyping && (
+                        <span className="inline-block w-2 h-4 ml-1 bg-[#00cea8] animate-pulse" />
+                      )}
                     </div>
                   )}
                 </div>
@@ -294,15 +312,15 @@ export default function TerminalChatbot() {
               <div className="flex items-center gap-2 font-mono text-sm">
                 <span className="text-[#ffbd2e]">$</span>
                 <input
-                  id='userInput'
+                  id="userInput"
                   ref={inputRef}
                   type="text"
                   value={input}
-                  onChange={(e) => setInput(e.target.value)}
+                  onChange={e => setInput(e.target.value)}
                   placeholder={CHATBOT_CONFIG.placeholder}
                   disabled={isTyping}
                   className="flex-1 bg-transparent text-white placeholder-gray-500 outline-none"
-                  onKeyDown={(e) => {
+                  onKeyDown={e => {
                     if (e.key === 'Enter' && !e.shiftKey) {
                       e.preventDefault();
                       handleSubmit(e);

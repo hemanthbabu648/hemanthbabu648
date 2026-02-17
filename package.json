@@ -9,7 +9,8 @@
     "next:lint": "next lint",
     "typescript:compile": "tsc --noEmit",
     "prettier": "prettier --write .",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "format": "yarn typescript:compile && yarn prettier && yarn lint"
   },
   "dependencies": {
     "framer-motion": "^12.17.0",

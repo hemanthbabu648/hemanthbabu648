@@ -92,7 +92,9 @@ export default function Hero() {
                   <span className="w-3 h-3 bg-green-400 rounded-full animate-pulse" />
                   <span className="text-[var(--text-secondary)] text-sm">
                     Currently working at{' '}
-                    <span className="text-[var(--text-primary)] font-medium">{HERO_SECTION.currentCompany}</span>
+                    <span className="text-[var(--text-primary)] font-medium">
+                      {HERO_SECTION.currentCompany}
+                    </span>
                   </span>
                 </div>
               </div>

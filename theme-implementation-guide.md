@@ -139,48 +139,48 @@ For `text-white/90`, replace with `text-[var(--text-primary)]/90`.
 
 #### Layout Components
 
-| File                                            | Change                                                                      |
-| ----------------------------------------------- | --------------------------------------------------------------------------- |
-| `src/components/layout/Header.tsx` (line 43)    | Brand name: `text-white` -> `text-[var(--text-primary)]`                    |
-| `src/components/layout/Header.tsx` (line 57)    | Active nav link: `text-white` -> `text-[var(--text-primary)]`               |
-| `src/components/layout/Header.tsx` (line 58)    | Nav hover: `hover:text-white` -> `hover:text-[var(--text-primary)]`         |
-| `src/components/layout/Header.tsx` (line 69)    | Mobile menu btn: `text-white` -> `text-[var(--text-primary)]`               |
-| `src/components/layout/Header.tsx` (line 87)    | Mobile active nav: `text-white` -> `text-[var(--text-primary)]`             |
-| `src/components/layout/Header.tsx` (line 88)    | Mobile nav hover: `hover:text-white` -> `hover:text-[var(--text-primary)]`  |
-| `src/components/layout/Footer.tsx` (line 24)    | Brand name: `text-white` -> `text-[var(--text-primary)]`                    |
+| File                                            | Change                                                                     |
+| ----------------------------------------------- | -------------------------------------------------------------------------- |
+| `src/components/layout/Header.tsx` (line 43)    | Brand name: `text-white` -> `text-[var(--text-primary)]`                   |
+| `src/components/layout/Header.tsx` (line 57)    | Active nav link: `text-white` -> `text-[var(--text-primary)]`              |
+| `src/components/layout/Header.tsx` (line 58)    | Nav hover: `hover:text-white` -> `hover:text-[var(--text-primary)]`        |
+| `src/components/layout/Header.tsx` (line 69)    | Mobile menu btn: `text-white` -> `text-[var(--text-primary)]`              |
+| `src/components/layout/Header.tsx` (line 87)    | Mobile active nav: `text-white` -> `text-[var(--text-primary)]`            |
+| `src/components/layout/Header.tsx` (line 88)    | Mobile nav hover: `hover:text-white` -> `hover:text-[var(--text-primary)]` |
+| `src/components/layout/Footer.tsx` (line 24)    | Brand name: `text-white` -> `text-[var(--text-primary)]`                   |
 | `src/components/layout/Footer.tsx` (line 32)    | "Media" header: `text-white` -> `text-[var(--text-primary)]`               |
-| `src/components/layout/ThemeToggle.tsx` (ln 29) | Hover: `hover:text-white` -> `hover:text-[var(--text-primary)]`             |
-| `src/components/layout/ThemeToggle.tsx` (ln 40) | Hover: `hover:text-white` -> `hover:text-[var(--text-primary)]`             |
-| `src/components/layout/SocialSidebar.tsx`       | Hover: `hover:text-white` -> `hover:text-[var(--text-primary)]`             |
+| `src/components/layout/ThemeToggle.tsx` (ln 29) | Hover: `hover:text-white` -> `hover:text-[var(--text-primary)]`            |
+| `src/components/layout/ThemeToggle.tsx` (ln 40) | Hover: `hover:text-white` -> `hover:text-[var(--text-primary)]`            |
+| `src/components/layout/SocialSidebar.tsx`       | Hover: `hover:text-white` -> `hover:text-[var(--text-primary)]`            |
 
 #### Section Components
 
-| File                                         | Change                                                                   |
-| -------------------------------------------- | ------------------------------------------------------------------------ |
-| `src/components/sections/Hero.tsx` (line 39) | Role text: `text-white/90` -> `text-[var(--text-primary)]/90`            |
-| `src/components/sections/Hero.tsx` (line 95) | Company name: `text-white` -> `text-[var(--text-primary)]`               |
-| `src/components/sections/Quote.tsx`          | Quote text: `text-white` -> `text-[var(--text-primary)]`                 |
+| File                                         | Change                                                        |
+| -------------------------------------------- | ------------------------------------------------------------- |
+| `src/components/sections/Hero.tsx` (line 39) | Role text: `text-white/90` -> `text-[var(--text-primary)]/90` |
+| `src/components/sections/Hero.tsx` (line 95) | Company name: `text-white` -> `text-[var(--text-primary)]`    |
+| `src/components/sections/Quote.tsx`          | Quote text: `text-white` -> `text-[var(--text-primary)]`      |
 
 #### UI Components
 
-| File                                                   | Change                                                        |
-| ------------------------------------------------------ | ------------------------------------------------------------- |
-| `src/components/ui/ProjectCard.tsx` (line 44)          | Small card title: `text-white` -> `text-[var(--text-primary)]` |
-| `src/components/ui/ProjectCard.tsx` (line 119)         | Card title: `text-white` -> `text-[var(--text-primary)]`      |
-| `src/components/ui/BlogCard.tsx` (line ~83)            | Title: `text-white` -> `text-[var(--text-primary)]`           |
-| `src/components/ui/ContactCard.tsx` (line 54)          | Title: `text-white` -> `text-[var(--text-primary)]`           |
-| `src/components/ui/ContactCard.tsx` (line 78)          | Link: `text-white` -> `text-[var(--text-primary)]`            |
-| `src/components/ui/SkillsGrid.tsx` (line 22)           | Category: `text-white` -> `text-[var(--text-primary)]`        |
-| `src/components/ui/ProfileImage.tsx` (line 52)         | Badge: `text-white` -> `text-[var(--text-primary)]`           |
-| `src/components/ui/CodeSnippet.tsx` (line 23)          | Text: `text-white/60` -> `text-[var(--text-primary)]/60`      |
+| File                                           | Change                                                         |
+| ---------------------------------------------- | -------------------------------------------------------------- |
+| `src/components/ui/ProjectCard.tsx` (line 44)  | Small card title: `text-white` -> `text-[var(--text-primary)]` |
+| `src/components/ui/ProjectCard.tsx` (line 119) | Card title: `text-white` -> `text-[var(--text-primary)]`       |
+| `src/components/ui/BlogCard.tsx` (line ~83)    | Title: `text-white` -> `text-[var(--text-primary)]`            |
+| `src/components/ui/ContactCard.tsx` (line 54)  | Title: `text-white` -> `text-[var(--text-primary)]`            |
+| `src/components/ui/ContactCard.tsx` (line 78)  | Link: `text-white` -> `text-[var(--text-primary)]`             |
+| `src/components/ui/SkillsGrid.tsx` (line 22)   | Category: `text-white` -> `text-[var(--text-primary)]`         |
+| `src/components/ui/ProfileImage.tsx` (line 52) | Badge: `text-white` -> `text-[var(--text-primary)]`            |
+| `src/components/ui/CodeSnippet.tsx` (line 23)  | Text: `text-white/60` -> `text-[var(--text-primary)]/60`       |
 
 #### Page Files
 
-| File                                        | Change                                                        |
-| ------------------------------------------- | ------------------------------------------------------------- |
-| `src/app/about-me/page.tsx` (line 286)      | Heading: `text-white` -> `text-[var(--text-primary)]`         |
-| `src/app/about-me/page.tsx` (line 313)      | Heading: `text-white` -> `text-[var(--text-primary)]`         |
-| `src/app/not-found.tsx` (line 8)            | Text: `text-white` -> `text-[var(--text-primary)]`            |
+| File                                   | Change                                                |
+| -------------------------------------- | ----------------------------------------------------- |
+| `src/app/about-me/page.tsx` (line 286) | Heading: `text-white` -> `text-[var(--text-primary)]` |
+| `src/app/about-me/page.tsx` (line 313) | Heading: `text-white` -> `text-[var(--text-primary)]` |
+| `src/app/not-found.tsx` (line 8)       | Text: `text-white` -> `text-[var(--text-primary)]`    |
 
 ### 3.2 Terminal Chatbot - No Changes
 
@@ -189,6 +189,7 @@ For `text-white/90`, replace with `text-[var(--text-primary)]/90`.
 ### 3.3 Skeleton Components
 
 **Files:**
+
 - `src/components/ui/ProjectCardSkeleton.tsx`
 - `src/components/ui/BlogCardSkeleton.tsx`
 
@@ -233,26 +234,26 @@ The `.black-violet-gradient` may need a light theme override:
 
 ## 5. Files Modified
 
-| # | File | Changes |
-|---|------|---------|
-| 1 | `src/app/globals.css` | Light theme variables + utility class overrides |
-| 2 | `src/app/layout.tsx` | Theme init script |
-| 3 | `src/components/layout/Header.tsx` | `text-white` -> `text-[var(--text-primary)]` (5 instances) |
-| 4 | `src/components/layout/Footer.tsx` | `text-white` -> `text-[var(--text-primary)]` (2 instances) |
-| 5 | `src/components/layout/ThemeToggle.tsx` | `hover:text-white` -> `hover:text-[var(--text-primary)]` (2 instances) |
-| 6 | `src/components/layout/SocialSidebar.tsx` | `hover:text-white` -> `hover:text-[var(--text-primary)]` (1 instance) |
-| 7 | `src/components/sections/Hero.tsx` | `text-white` replacements (2 instances) |
-| 8 | `src/components/sections/Quote.tsx` | `text-white` -> `text-[var(--text-primary)]` (1 instance) |
-| 9 | `src/components/ui/ProjectCard.tsx` | `text-white` replacements (2 instances) |
-| 10 | `src/components/ui/BlogCard.tsx` | `text-white` replacement (1 instance) |
-| 11 | `src/components/ui/ContactCard.tsx` | `text-white` replacements (2 instances) |
-| 12 | `src/components/ui/SkillsGrid.tsx` | `text-white` replacement (1 instance) |
-| 13 | `src/components/ui/ProfileImage.tsx` | `text-white` replacement (1 instance) |
-| 14 | `src/components/ui/CodeSnippet.tsx` | `text-white/60` replacement (1 instance) |
-| 15 | `src/components/ui/ProjectCardSkeleton.tsx` | Theme-aware skeleton colors |
-| 16 | `src/components/ui/BlogCardSkeleton.tsx` | Theme-aware skeleton colors |
-| 17 | `src/app/about-me/page.tsx` | `text-white` replacements (2 instances) |
-| 18 | `src/app/not-found.tsx` | `text-white` replacement (1 instance) |
+| #   | File                                        | Changes                                                                |
+| --- | ------------------------------------------- | ---------------------------------------------------------------------- |
+| 1   | `src/app/globals.css`                       | Light theme variables + utility class overrides                        |
+| 2   | `src/app/layout.tsx`                        | Theme init script                                                      |
+| 3   | `src/components/layout/Header.tsx`          | `text-white` -> `text-[var(--text-primary)]` (5 instances)             |
+| 4   | `src/components/layout/Footer.tsx`          | `text-white` -> `text-[var(--text-primary)]` (2 instances)             |
+| 5   | `src/components/layout/ThemeToggle.tsx`     | `hover:text-white` -> `hover:text-[var(--text-primary)]` (2 instances) |
+| 6   | `src/components/layout/SocialSidebar.tsx`   | `hover:text-white` -> `hover:text-[var(--text-primary)]` (1 instance)  |
+| 7   | `src/components/sections/Hero.tsx`          | `text-white` replacements (2 instances)                                |
+| 8   | `src/components/sections/Quote.tsx`         | `text-white` -> `text-[var(--text-primary)]` (1 instance)              |
+| 9   | `src/components/ui/ProjectCard.tsx`         | `text-white` replacements (2 instances)                                |
+| 10  | `src/components/ui/BlogCard.tsx`            | `text-white` replacement (1 instance)                                  |
+| 11  | `src/components/ui/ContactCard.tsx`         | `text-white` replacements (2 instances)                                |
+| 12  | `src/components/ui/SkillsGrid.tsx`          | `text-white` replacement (1 instance)                                  |
+| 13  | `src/components/ui/ProfileImage.tsx`        | `text-white` replacement (1 instance)                                  |
+| 14  | `src/components/ui/CodeSnippet.tsx`         | `text-white/60` replacement (1 instance)                               |
+| 15  | `src/components/ui/ProjectCardSkeleton.tsx` | Theme-aware skeleton colors                                            |
+| 16  | `src/components/ui/BlogCardSkeleton.tsx`    | Theme-aware skeleton colors                                            |
+| 17  | `src/app/about-me/page.tsx`                 | `text-white` replacements (2 instances)                                |
+| 18  | `src/app/not-found.tsx`                     | `text-white` replacement (1 instance)                                  |
 
 ---
 

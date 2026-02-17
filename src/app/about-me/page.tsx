@@ -101,12 +101,12 @@ export default function AboutMePage() {
                     My toolkit spans the modern JavaScript ecosystem — from building interactive UIs
                     with
                     <span className="text-[var(--accent-cyan)]"> React</span> and{' '}
-                    <span className="text-[var(--accent-cyan)]">React Native</span> to
-                    server-side development with{' '}
-                    <span className="text-[var(--accent-cyan)]">Node.js</span>. I work with
-                    frameworks like <span className="text-[var(--accent-cyan)]">Next.js</span>{' '}
-                    and <span className="text-[var(--accent-cyan)]">Tailwind CSS</span> to
-                    deliver performant, scalable applications.
+                    <span className="text-[var(--accent-cyan)]">React Native</span> to server-side
+                    development with <span className="text-[var(--accent-cyan)]">Node.js</span>. I
+                    work with frameworks like{' '}
+                    <span className="text-[var(--accent-cyan)]">Next.js</span> and{' '}
+                    <span className="text-[var(--accent-cyan)]">Tailwind CSS</span> to deliver
+                    performant, scalable applications.
                   </p>
                   <p className="text-[var(--text-secondary)] leading-relaxed">
                     What drives me? Turning complex problems into elegant solutions. I thrive on
@@ -156,8 +156,8 @@ export default function AboutMePage() {
                   Web development has been more than a career — it&apos;s a genuine passion that
                   drives me every day. I find immense satisfaction in experimenting with new
                   technologies, building tools that solve real problems, and constantly refining my
-                  craft. While <span className="text-[var(--accent-cyan)]">Bangalore</span> is
-                  where I work, my roots lie in my hometown, where I often return to reconnect with
+                  craft. While <span className="text-[var(--accent-cyan)]">Bangalore</span> is where
+                  I work, my roots lie in my hometown, where I often return to reconnect with
                   agricultural life and explore the countryside.
                 </p>
                 <p className="text-[var(--text-secondary)] leading-relaxed">
@@ -226,10 +226,8 @@ export default function AboutMePage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-primary)]/60 to-transparent" />
               </div>
               <p className="text-[var(--text-secondary)] mb-4 leading-relaxed">
-                <span className="font-semibold text-[var(--accent-purple)]">
-                  Finance Tracker
-                </span>{' '}
-                — a comprehensive web application designed to simplify personal finance management.
+                <span className="font-semibold text-[var(--accent-purple)]">Finance Tracker</span> —
+                a comprehensive web application designed to simplify personal finance management.
                 Built with Next.js, React, and Tailwind CSS, this project showcases my commitment to
                 creating intuitive, user-centric applications that solve everyday problems.
               </p>
@@ -283,7 +281,9 @@ export default function AboutMePage() {
             <div className="relative group">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-[var(--accent-purple)]/20 to-[var(--accent-cyan)]/20 rounded-xl opacity-0 group-hover:opacity-100 blur transition-opacity duration-500" />
               <div className="relative bg-[var(--bg-secondary)]/60 backdrop-blur-sm rounded-xl p-6 border border-[var(--border-muted)] group-hover:border-[var(--accent-purple)]/30 transition-colors h-full">
-                <h3 className="text-lg font-semibold mb-4 text-[var(--text-primary)]">Let&apos;s Connect</h3>
+                <h3 className="text-lg font-semibold mb-4 text-[var(--text-primary)]">
+                  Let&apos;s Connect
+                </h3>
                 <ul className="space-y-3">
                   {socialLinks.map(link => (
                     <li key={link.title}>

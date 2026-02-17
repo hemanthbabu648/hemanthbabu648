@@ -33,7 +33,7 @@ export const CHAT_RESPONSES: ChatResponse[] = [
   // Skills
   {
     keywords: ['skills', 'technologies', 'tech stack', 'what can you do', 'expertise'],
-    response: `Here are my core skills:\n\n${SKILLS.map((s) => `• ${s.category}: ${s.items.join(', ')}`).join('\n')}\n\nI'm always learning and exploring new technologies!`,
+    response: `Here are my core skills:\n\n${SKILLS.map(s => `• ${s.category}: ${s.items.join(', ')}`).join('\n')}\n\nI'm always learning and exploring new technologies!`,
   },
   // Contact
   {
@@ -102,7 +102,7 @@ export function findResponse(query: string): ChatResponse | null {
 
   for (const item of CHAT_RESPONSES) {
     const matches = item.keywords.filter(
-      (keyword) => normalizedQuery.includes(keyword) || keyword.includes(normalizedQuery)
+      keyword => normalizedQuery.includes(keyword) || keyword.includes(normalizedQuery)
     ).length;
 
     if (matches > maxMatches) {
