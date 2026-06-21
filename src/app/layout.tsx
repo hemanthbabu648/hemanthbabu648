@@ -24,8 +24,8 @@ export default function RootLayout({
         /> */}
 
         {/* Preconnect to external domains for performance */}
-        <link rel="preconnect" href="https://blogs.hemanthbabu648.com" />
-        <link rel="preconnect" href="https://apps.hemanthbabu648.com" />
+        <link rel="preconnect" href="https://blogs.hemanthbabu.com" />
+        <link rel="preconnect" href="https://apps.hemanthbabu.com" />
 
         {/* JSON-LD Structured Data */}
         <script

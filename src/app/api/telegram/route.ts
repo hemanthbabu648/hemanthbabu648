@@ -27,11 +27,11 @@ export async function POST(request: NextRequest) {
     }
 
     const message = `🔔 <b>Portfolio Query</b> 🔔
-<b>Question:</b> ${question}
-<b>From:</b> ${name || 'Anonymous'}
-<b>Contact:</b> ${contact || 'Not provided'}
-<b>Time:</b> ${new Date().toLocaleString()}
-Website: https://hemanthbabu648.com`;
+  <b>Question:</b> ${question}
+  <b>From:</b> ${name || 'Anonymous'}
+  <b>Contact:</b> ${contact || 'Not provided'}
+  <b>Time:</b> ${new Date().toLocaleString()}
+  Website: https://hemanthbabu.com`;
 
     const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
       method: 'POST',

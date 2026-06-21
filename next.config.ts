@@ -6,22 +6,22 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'blogs.hemanthbabu648.com',
+        hostname: 'blogs.hemanthbabu.com',
         pathname: '/**',
       },
       {
         protocol: 'https',
-        hostname: 'www.blogs.hemanthbabu648.com',
+        hostname: 'www.blogs.hemanthbabu.com',
         pathname: '/**',
       },
       {
         protocol: 'https',
-        hostname: 'apps.hemanthbabu648.com',
+        hostname: 'apps.hemanthbabu.com',
         pathname: '/**',
       },
       {
         protocol: 'https',
-        hostname: 'www.apps.hemanthbabu648.com',
+        hostname: 'www.apps.hemanthbabu.com',
         pathname: '/**',
       },
       // {

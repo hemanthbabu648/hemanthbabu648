@@ -8,7 +8,7 @@ export const siteConfig = {
   name: SEO_NAME,
   title: `${SEO_NAME} - ${PROFILE.role[0]}`,
   description: `${SEO_NAME} is a ${PROFILE.role[0]} with ${PROFILE.yearsOfExperience} years of hands-on experience in React, Next.js, React Native, and TypeScript, specializing in responsive web applications and cross-platform mobile apps.`,
-  url: 'https://www.hemanthbabu648.com',
+  url: 'https://www.hemanthbabu.com',
   ogImage: '/images/developer.jpeg',
   links: {
     github: PROFILE.github,

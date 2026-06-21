@@ -8,7 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Only actual routes are listed here.
   // Section anchors (/#projects, /#skills, etc.) are excluded — Google strips
   // URL fragments and treats them as the homepage, making them redundant.
-  // External subdomains (apps.hemanthbabu648.com, blogs.hemanthbabu648.com)
+  // External subdomains (apps.hemanthbabu.com, blogs.hemanthbabu.com)
   // are excluded — sitemaps should only contain URLs from the same domain.
   // Each subdomain should have its own sitemap.
 

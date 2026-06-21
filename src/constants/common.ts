@@ -13,6 +13,6 @@ export const PROFILE = {
 };
 
 export const MY_WEBSITES = {
-  apps: 'https://apps.hemanthbabu648.com',
-  blogs: 'https://blogs.hemanthbabu648.com',
+  apps: 'https://apps.hemanthbabu.com',
+  blogs: 'https://blogs.hemanthbabu.com',
 };
